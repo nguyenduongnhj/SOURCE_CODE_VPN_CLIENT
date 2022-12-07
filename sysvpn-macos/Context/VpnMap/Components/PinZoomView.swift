@@ -12,6 +12,7 @@ class ZoomStoreValue {
     var lastValue: Double = 0
     var intCountSampleValue = 0
 }
+
 struct ZoomModifier: ViewModifier {
     private var contentSize: CGSize
     @Binding var screenSize: CGSize
@@ -149,10 +150,7 @@ struct ZoomModifier: ViewModifier {
             }
     }
     
-    
-   
     func updateDetail(detail: Double) {
-      
         if detail == 0 {
             return
         }
@@ -166,38 +164,35 @@ struct ZoomModifier: ViewModifier {
             return
         }
         
-        guard let event  = event else {
+        guard let event = event else {
             return
         }
         
-        if WindowMgr.shared.nsWindow != event.window { 
+        if WindowMgr.shared.nsWindow != event.window {
             return
         }
         
         if event.phase.rawValue == 0 {
             if storeValue.lastValue == event.timestamp {
-               storeValue.intCountSampleValue += 1
-           } else {
-               storeValue.intCountSampleValue = 0
-           }
+                storeValue.intCountSampleValue += 1
+            } else {
+                storeValue.intCountSampleValue = 0
+            }
            
-           storeValue.lastValue =  event.timestamp
+            storeValue.lastValue = event.timestamp
            
-           if  storeValue.intCountSampleValue > 10 {
-               return
-           }
+            if storeValue.intCountSampleValue > 10 {
+                return
+            }
            
-       } else {
-           storeValue.intCountSampleValue = 0
-       }
+        } else {
+            storeValue.intCountSampleValue = 0
+        }
     
-     
-        
-       self.updateDetail(detail: Double(event.scrollingDeltaY))
+        updateDetail(detail: Double(event.scrollingDeltaY))
     }
     
     func trackScrollWheel() {
-        
         NSApp.publisher(for: \.currentEvent)
             .filter { event in event?.type == .scrollWheel }
             .throttle(for: .milliseconds(20),

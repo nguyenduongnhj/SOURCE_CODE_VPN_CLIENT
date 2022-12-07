@@ -20,11 +20,11 @@ public class CoreAppConstants {
         static let announcementRefreshTime: TimeInterval = 12 * 60 * 60
     }
     
-    static var appBundleId: String = (Bundle.main.bundleIdentifier ?? "om.syspvn.client.macos").asMainAppBundleIdentifier
+    static var appBundleId: String = (Bundle.main.bundleIdentifier ?? "om.sysvpn.client.macos").asMainAppBundleIdentifier
     
     struct AppGroups {
-        static let main = "J953BZ6B49.group.com.syspvn.macos"
-        static let teamId = "J953BZ6B49"
+        static let main = "JM6FBPTUR3.group.com.sysvpn.macos"
+        static let teamId = "JM6FBPTUR3"
     }
      
     struct NetworkExtensions {
@@ -33,14 +33,14 @@ public class CoreAppConstants {
          static let wireguard = "\(appBundleId).WireGuardSysExtension"
           */
         // static let openVpn = "\(appBundleId).OpenVpnAppExtension"
-        static let openVpn = "\(appBundleId).OpenVpnAppExtension"
+        static let openVpn = "\(appBundleId).AppVpnAppExtension"
         //  static let wireguard = "\(appBundleId).WireGuardAppExtension"
-        static let wireguard = "\(appBundleId).WireGuardAppExtension"
+        static let wireguard = "\(appBundleId).AppVpnAppExtension"
     }
     
     struct SystemExtensions {
-        static let openVpn = "\(appBundleId).OpenVpnSysExtension"
-        static let wireguard = "\(appBundleId).OpenVpnSysExtension"
+        static let openVpn = "\(appBundleId).AppSysExtension"
+        static let wireguard = "\(appBundleId).AppSysExtension"
         // static let wireguard = "\(appBundleId).WireGuardSysExtension"
     }
     
@@ -49,16 +49,13 @@ public class CoreAppConstants {
         static let wireguard = "WIREGUARD"
         static let configurationField = "vpnProtocolConfiguration"
     }
-    
 }
 
 extension String {
     var asMainAppBundleIdentifier: String {
         var result = replacingOccurrences(of: ".widget", with: "")
-        result = result.replacingOccurrences(of: ".OpenVpnSysExtension", with: "")
-        result = result.replacingOccurrences(of: ".WireGuardSysExtension", with: "")
-        result = result.replacingOccurrences(of: ".OpenVpnAppExtension", with: "")
-        result = result.replacingOccurrences(of: ".WireGuardAppExtension", with: "")
+        result = result.replacingOccurrences(of: ".AppSysExtension", with: "")
+        result = result.replacingOccurrences(of: ".AppVpnAppExtension", with: "")
         return result
     }
 }

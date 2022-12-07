@@ -38,7 +38,7 @@ struct HomeLeftPanelView: View {
             ProfileTabbarView(index: $viewModel.indexTabbar, onChangeTab: {
                 onChangeTab?()
             })
-                .padding(.horizontal, 16)
+            .padding(.horizontal, 16)
             Spacer().frame(height: 20)
             if viewModel.indexTabbar == 0 {
                 HomeMenuButtonView(
@@ -72,14 +72,13 @@ struct HomeLeftPanelView: View {
                     }
                 }
             } else {
-                HomeProfileMenuView( onTapCreate: {
+                HomeProfileMenuView(onTapCreate: {
                     onTapCreateProfile?()
                 }, onTapMore: {
                     withAnimation {
                         selectedItem = .profile
                     }
                 })
-
             }
             
         }.frame(maxWidth: .infinity, alignment: .leading)
@@ -131,7 +130,7 @@ struct HomeLeftPanelView: View {
                 Spacer().frame(height: 8)
                 if viewModel.isPremium {
                     HStack {
-                        Text(L10n.Global.daysLeft(viewModel.dayPremiumLeft) )
+                        Text(L10n.Global.daysLeft(viewModel.dayPremiumLeft))
                             .font(Font.system(size: 12, weight: .medium))
                             .foregroundColor(Asset.Colors.subTextColor.swiftUIColor)
                         Text(L10n.Global.plusExtended)
@@ -140,7 +139,7 @@ struct HomeLeftPanelView: View {
                     }
                 } else {
                     HStack {
-                        Text( L10n.Global.daysFree(viewModel.dayFree))
+                        Text(L10n.Global.daysFree(viewModel.dayFree))
                             .font(Font.system(size: 12, weight: .medium))
                             .foregroundColor(Asset.Colors.subTextColor.swiftUIColor)
                         Text(L10n.Global.plusExtended)

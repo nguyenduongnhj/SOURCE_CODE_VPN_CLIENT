@@ -21,7 +21,6 @@ extension ProfileSelectLocationView {
             getListCountry()
         }
         
-        
         func getListCountry() {
             listCountry = AppDataManager.shared.userCountry?.availableCountries ?? []
         }
@@ -52,7 +51,6 @@ extension ProfileSelectLocationView {
                 AppDataManager.shared.saveProfile()
                 onComplete?()
             }
-             
         }
     }
 }

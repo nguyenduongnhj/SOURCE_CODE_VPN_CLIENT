@@ -240,12 +240,12 @@ class AppDataManager {
         return nil
     }
     
-    func getNodeByCountryId(countryId: Int) -> INodeInfo?{
+    func getNodeByCountryId(countryId: Int) -> INodeInfo? {
         guard let country = userCountry?.availableCountries?.first(where: { ct in
             return ct.id == countryId
         }) else {
             return nil
-        } 
+        }
         return country
     }
     

@@ -125,5 +125,3 @@ struct HomeView: View {
             }
     }
 }
-
- 

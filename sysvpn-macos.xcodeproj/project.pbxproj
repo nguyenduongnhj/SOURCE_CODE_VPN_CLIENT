@@ -26,9 +26,6 @@
 		9E668E0028E8B30A009CDC95 /* HomeAlertConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E668DFF28E8B30A009CDC95 /* HomeAlertConnectionView.swift */; };
 		9E668E0228E8BC62009CDC95 /* CountryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E668E0128E8BC62009CDC95 /* CountryItemView.swift */; };
 		9E9C9564290A8348009B2FFE /* IPCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BB228FD41CA00205ECD /* IPCHelper.swift */; };
-		9E9C9565290A834C009B2FFE /* IPCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BB228FD41CA00205ECD /* IPCHelper.swift */; };
-		9E9C956B290A83AA009B2FFE /* WireGuardTunnelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC9AC29046B080014ABC9 /* WireGuardTunnelAdapter.swift */; };
-		9E9C956F290A8699009B2FFE /* WireGuardAdapterEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9C956C290A8695009B2FFE /* WireGuardAdapterEx.swift */; };
 		9E9C9571290A8929009B2FFE /* WireGuardAdapterEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9C956C290A8695009B2FFE /* WireGuardAdapterEx.swift */; };
 		9E9C9572290A9045009B2FFE /* IPCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BB228FD41CA00205ECD /* IPCHelper.swift */; };
 		9EB62F8228E7E54C00351D98 /* HomeZoomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB62F8128E7E54C00351D98 /* HomeZoomSliderView.swift */; };
@@ -152,18 +149,15 @@
 		B9D7F71928D38343008B1D39 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71828D38343008B1D39 /* System.swift */; };
 		B9D7F71C28D781A8008B1D39 /* AppDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71B28D781A8008B1D39 /* AppDataManager.swift */; };
 		FA00FA082934B7D900BC1AF7 /* ProtoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA00FA072934B7D900BC1AF7 /* ProtoAdapter.swift */; };
-		FA00FA092934B7D900BC1AF7 /* ProtoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA00FA072934B7D900BC1AF7 /* ProtoAdapter.swift */; };
-		FA00FA0B2934B7D900BC1AF7 /* ProtoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA00FA072934B7D900BC1AF7 /* ProtoAdapter.swift */; };
 		FA00FA0F2934C13200BC1AF7 /* WireGuardAdapterEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9C956C290A8695009B2FFE /* WireGuardAdapterEx.swift */; };
 		FA00FA102934C13200BC1AF7 /* ProtoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA00FA072934B7D900BC1AF7 /* ProtoAdapter.swift */; };
 		FA00FA112934C13200BC1AF7 /* WireGuardTunnelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC9AC29046B080014ABC9 /* WireGuardTunnelAdapter.swift */; };
 		FA00FA122934C13200BC1AF7 /* OpenVpnAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC9B029046BE20014ABC9 /* OpenVpnAdapter.swift */; };
 		FA00FA142934C14C00BC1AF7 /* TunnelKitWireGuardAppExtension in Frameworks */ = {isa = PBXBuildFile; productRef = FA00FA132934C14C00BC1AF7 /* TunnelKitWireGuardAppExtension */; };
-		FA12F19828FDA98A009753EE /* com.syspvn.client.macos.OpenVpnSysExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = FAA35B4528FD335600205ECD /* com.syspvn.client.macos.OpenVpnSysExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FA12F19828FDA98A009753EE /* com.sysvpn.client.macos.AppSysExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = FAA35B4528FD335600205ECD /* com.sysvpn.client.macos.AppSysExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA12F19D28FDAE9D009753EE /* SystemNetworkingMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12F19C28FDAE9D009753EE /* SystemNetworkingMonitor.swift */; };
 		FA12F19F28FDB61A009753EE /* NetworkStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12F19E28FDB61A009753EE /* NetworkStatistics.swift */; };
 		FA12F1A328FDCBAD009753EE /* IPCHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12F1A128FDCB0D009753EE /* IPCHttpRequest.swift */; };
-		FA12F1A428FDCBAD009753EE /* IPCHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12F1A128FDCB0D009753EE /* IPCHttpRequest.swift */; };
 		FA21620829312F1000F2F616 /* HomeViewProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21620729312F1000F2F616 /* HomeViewProto.swift */; };
 		FA21620A29313F4B00F2F616 /* AppAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21620929313F4B00F2F616 /* AppAlertManager.swift */; };
 		FA3A885C292646CE000BDB3D /* AppDataManager+Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A885B292646CE000BDB3D /* AppDataManager+Recent.swift */; };
@@ -180,11 +174,6 @@
 		FAA35B4B28FD335600205ECD /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35B4A28FD335600205ECD /* PacketTunnelProvider.swift */; };
 		FAA35B4D28FD335600205ECD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35B4C28FD335600205ECD /* main.swift */; };
 		FAA35B5828FD336300205ECD /* TunnelKitOpenVPNAppExtension in Frameworks */ = {isa = PBXBuildFile; productRef = FAA35B5728FD336300205ECD /* TunnelKitOpenVPNAppExtension */; };
-		FAA35B6E28FD33DA00205ECD /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA35B4728FD335600205ECD /* NetworkExtension.framework */; };
-		FAA35B7128FD33DA00205ECD /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35B7028FD33DA00205ECD /* PacketTunnelProvider.swift */; };
-		FAA35B7328FD33DA00205ECD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35B7228FD33DA00205ECD /* main.swift */; };
-		FAA35B7828FD33DA00205ECD /* com.syspvn.client.macos.WireGuardSysExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = FAA35B6D28FD33DA00205ECD /* com.syspvn.client.macos.WireGuardSysExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FAA35B7D28FD340600205ECD /* TunnelKitWireGuardAppExtension in Frameworks */ = {isa = PBXBuildFile; productRef = FAA35B7C28FD340600205ECD /* TunnelKitWireGuardAppExtension */; };
 		FAA35B8D28FD37C700205ECD /* TunnelKitOpenVPN in Frameworks */ = {isa = PBXBuildFile; productRef = FAA35B8C28FD37C700205ECD /* TunnelKitOpenVPN */; };
 		FAA35B8F28FD37CE00205ECD /* TunnelKitWireGuard in Frameworks */ = {isa = PBXBuildFile; productRef = FAA35B8E28FD37CE00205ECD /* TunnelKitWireGuard */; };
 		FAA35BB628FD41CB00205ECD /* AppConfigManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35B9228FD41C800205ECD /* AppConfigManagement.swift */; };
@@ -211,15 +200,10 @@
 		FAA35BD028FD41CB00205ECD /* SysVPNEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BB428FD41CB00205ECD /* SysVPNEnum.swift */; };
 		FAA35BD128FD41CB00205ECD /* SysVPNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BB528FD41CB00205ECD /* SysVPNError.swift */; };
 		FAA35BD528FD441700205ECD /* IPCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BB228FD41CA00205ECD /* IPCHelper.swift */; };
-		FAA35BD628FD441900205ECD /* IPCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BB228FD41CA00205ECD /* IPCHelper.swift */; };
 		FAA35BD928FD442500205ECD /* CodeSignatureComparitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BB028FD41CA00205ECD /* CodeSignatureComparitor.swift */; };
-		FAA35BDA28FD442600205ECD /* CodeSignatureComparitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BB028FD41CA00205ECD /* CodeSignatureComparitor.swift */; };
 		FAA35BDB28FD442B00205ECD /* XPCBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BAF28FD41CA00205ECD /* XPCBaseService.swift */; };
-		FAA35BDC28FD442C00205ECD /* XPCBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BAF28FD41CA00205ECD /* XPCBaseService.swift */; };
 		FAA35BDD28FD443600205ECD /* IPCNetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BAE28FD41CA00205ECD /* IPCNetworkExtension.swift */; };
-		FAA35BDE28FD443600205ECD /* IPCNetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BAE28FD41CA00205ECD /* IPCNetworkExtension.swift */; };
 		FAA35BDF28FD443E00205ECD /* IPCBaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BAB28FD41CA00205ECD /* IPCBaseConnection.swift */; };
-		FAA35BE028FD443F00205ECD /* IPCBaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BAB28FD41CA00205ECD /* IPCBaseConnection.swift */; };
 		FAA35BE228FD46E400205ECD /* demofile.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = FAA35BE128FD46E400205ECD /* demofile.ovpn */; };
 		FAAC5FBC292CA5DB00155B46 /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC5FBB292CA5DA00155B46 /* SwiftyPing.swift */; };
 		FABBB8D129042C8700595D95 /* VpnMapOverlayLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBB8D029042C8700595D95 /* VpnMapOverlayLayerView.swift */; };
@@ -233,13 +217,9 @@
 		FACEC9B32904D71A0014ABC9 /* SysMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC9B22904D71A0014ABC9 /* SysMessageService.swift */; };
 		FACEC9B52904F82D0014ABC9 /* ExKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC9B42904F82D0014ABC9 /* ExKeyChain.swift */; };
 		FACEC9B62904F8300014ABC9 /* ExKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC9B42904F82D0014ABC9 /* ExKeyChain.swift */; };
-		FACEC9B72904F8300014ABC9 /* ExKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC9B42904F82D0014ABC9 /* ExKeyChain.swift */; };
-		FACEC9B82904F8310014ABC9 /* ExKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC9B42904F82D0014ABC9 /* ExKeyChain.swift */; };
 		FACEC9B92904F8310014ABC9 /* ExKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC9B42904F82D0014ABC9 /* ExKeyChain.swift */; };
 		FACEC9BA290503D80014ABC9 /* CoreAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BA128FD41C900205ECD /* CoreAppConstants.swift */; };
-		FACEC9BC290503DA0014ABC9 /* CoreAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BA128FD41C900205ECD /* CoreAppConstants.swift */; };
 		FACEC9BD290503DA0014ABC9 /* CoreAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BA128FD41C900205ECD /* CoreAppConstants.swift */; };
-		FACEC9BE290503DB0014ABC9 /* CoreAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA35BA128FD41C900205ECD /* CoreAppConstants.swift */; };
 		FAD511DA292BDAD200194004 /* get_interface.c in Sources */ = {isa = PBXBuildFile; fileRef = FAD511D9292BDAD200194004 /* get_interface.c */; };
 		FAD511DF292C010E00194004 /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD511DE292C010E00194004 /* NetworkChecker.swift */; };
 		FADF0E602916260E00C88618 /* LoginBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADF0E5F2916260E00C88618 /* LoginBannerView.swift */; };
@@ -248,22 +228,11 @@
 		FAEE1BFA28FF1A830044B5CD /* TimerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1BF928FF1A830044B5CD /* TimerFactory.swift */; };
 		FAFAAE1F290280A6006A69E3 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA35B4728FD335600205ECD /* NetworkExtension.framework */; };
 		FAFAAE27290280A6006A69E3 /* OpenVpnAppExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FAFAAE1E290280A6006A69E3 /* OpenVpnAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FAFAAE3B29028131006A69E3 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA35B4728FD335600205ECD /* NetworkExtension.framework */; };
-		FAFAAE3E29028131006A69E3 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAAE3D29028131006A69E3 /* PacketTunnelProvider.swift */; };
-		FAFAAE4329028131006A69E3 /* WireGuardAppExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FAFAAE3A29028131006A69E3 /* WireGuardAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAFAAE48290281BC006A69E3 /* TunnelKitOpenVPNAppExtension in Frameworks */ = {isa = PBXBuildFile; productRef = FAFAAE47290281BC006A69E3 /* TunnelKitOpenVPNAppExtension */; };
-		FAFAAE4A290281C1006A69E3 /* TunnelKitWireGuardAppExtension in Frameworks */ = {isa = PBXBuildFile; productRef = FAFAAE49290281C1006A69E3 /* TunnelKitWireGuardAppExtension */; };
 		FAFAAE4D2902962A006A69E3 /* HomeConnectionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAAE4C2902962A006A69E3 /* HomeConnectionButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9E4A04382907D10C00B059EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC09D70F28BCDCD40078E928 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FAA35B8628FD35A400205ECD;
-			remoteInfo = WireGuardKitGo;
-		};
 		AC09D72928BCDCD80078E928 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC09D70F28BCDCD40078E928 /* Project object */;
@@ -285,33 +254,12 @@
 			remoteGlobalIDString = FAA35B4428FD335600205ECD;
 			remoteInfo = "sysvpn-macosOpenVPNTunnelExtension";
 		};
-		FAA35B7628FD33DA00205ECD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC09D70F28BCDCD40078E928 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FAA35B6C28FD33DA00205ECD;
-			remoteInfo = WireGuardSysExtension;
-		};
-		FAA35B8A28FD36B300205ECD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC09D70F28BCDCD40078E928 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FAA35B8628FD35A400205ECD;
-			remoteInfo = WireGuardKitGo;
-		};
 		FAFAAE25290280A6006A69E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC09D70F28BCDCD40078E928 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FAFAAE1D290280A6006A69E3;
 			remoteInfo = OpenVpnAppExtension;
-		};
-		FAFAAE4129028131006A69E3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC09D70F28BCDCD40078E928 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FAFAAE3929028131006A69E3;
-			remoteInfo = WireGuardAppExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -333,8 +281,7 @@
 			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				FAA35B7828FD33DA00205ECD /* com.syspvn.client.macos.WireGuardSysExtension.systemextension in Embed System Extensions */,
-				FA12F19828FDA98A009753EE /* com.syspvn.client.macos.OpenVpnSysExtension.systemextension in Embed System Extensions */,
+				FA12F19828FDA98A009753EE /* com.sysvpn.client.macos.AppSysExtension.systemextension in Embed System Extensions */,
 			);
 			name = "Embed System Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +293,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				FAFAAE27290280A6006A69E3 /* OpenVpnAppExtension.appex in Embed Foundation Extensions */,
-				FAFAAE4329028131006A69E3 /* WireGuardAppExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +330,7 @@
 		9EC3322E28C1151800CA5DF5 /* LoginInputTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputTextFiled.swift; sourceTree = "<group>"; };
 		9EC3323228C2134200CA5DF5 /* LoginButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonStyle.swift; sourceTree = "<group>"; };
 		9EC3323428C254DF00CA5DF5 /* LoginLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoadingView.swift; sourceTree = "<group>"; };
-		AC09D71728BCDCD40078E928 /* sysvpn-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sysvpn-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC09D71728BCDCD40078E928 /* SysVPNClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SysVPNClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC09D71A28BCDCD40078E928 /* sysvpn_macosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sysvpn_macosApp.swift; sourceTree = "<group>"; };
 		AC09D71C28BCDCD40078E928 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC09D71E28BCDCD70078E928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -507,13 +453,12 @@
 		FA8DEA89291956F1000A6818 /* LogFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFunc.swift; sourceTree = "<group>"; };
 		FAA35B3C28FD2B2D00205ECD /* Moya+Rx+IPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+Rx+IPC.swift"; sourceTree = "<group>"; };
 		FAA35B4028FD32A100205ECD /* tunnelkit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = tunnelkit; sourceTree = "<group>"; };
-		FAA35B4528FD335600205ECD /* com.syspvn.client.macos.OpenVpnSysExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.syspvn.client.macos.OpenVpnSysExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA35B4528FD335600205ECD /* com.sysvpn.client.macos.AppSysExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.sysvpn.client.macos.AppSysExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA35B4728FD335600205ECD /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		FAA35B4A28FD335600205ECD /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		FAA35B4C28FD335600205ECD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FAA35B4E28FD335600205ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA35B4F28FD335600205ECD /* OpenVpnSysExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenVpnSysExtension.entitlements; sourceTree = "<group>"; };
-		FAA35B6D28FD33DA00205ECD /* com.syspvn.client.macos.WireGuardSysExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.syspvn.client.macos.WireGuardSysExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA35B7028FD33DA00205ECD /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		FAA35B7228FD33DA00205ECD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FAA35B7428FD33DA00205ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -571,7 +516,6 @@
 		FAFAAE21290280A6006A69E3 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		FAFAAE23290280A6006A69E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAFAAE24290280A6006A69E3 /* OpenVpnAppExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenVpnAppExtension.entitlements; sourceTree = "<group>"; };
-		FAFAAE3A29028131006A69E3 /* WireGuardAppExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WireGuardAppExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFAAE3D29028131006A69E3 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		FAFAAE3F29028131006A69E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAFAAE4029028131006A69E3 /* WireGuardAppExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WireGuardAppExtension.entitlements; sourceTree = "<group>"; };
@@ -631,15 +575,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAA35B6A28FD33DA00205ECD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FAA35B7D28FD340600205ECD /* TunnelKitWireGuardAppExtension in Frameworks */,
-				FAA35B6E28FD33DA00205ECD /* NetworkExtension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FAFAAE1B290280A6006A69E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -647,15 +582,6 @@
 				FAFAAE48290281BC006A69E3 /* TunnelKitOpenVPNAppExtension in Frameworks */,
 				FAFAAE1F290280A6006A69E3 /* NetworkExtension.framework in Frameworks */,
 				FA00FA142934C14C00BC1AF7 /* TunnelKitWireGuardAppExtension in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAFAAE3729028131006A69E3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FAFAAE4A290281C1006A69E3 /* TunnelKitWireGuardAppExtension in Frameworks */,
-				FAFAAE3B29028131006A69E3 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,13 +697,11 @@
 		AC09D71828BCDCD40078E928 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC09D71728BCDCD40078E928 /* sysvpn-macos.app */,
+				AC09D71728BCDCD40078E928 /* SysVPNClient.app */,
 				AC09D72828BCDCD80078E928 /* sysvpn-macosTests.xctest */,
 				AC09D73228BCDCD80078E928 /* sysvpn-macosUITests.xctest */,
-				FAA35B4528FD335600205ECD /* com.syspvn.client.macos.OpenVpnSysExtension.systemextension */,
-				FAA35B6D28FD33DA00205ECD /* com.syspvn.client.macos.WireGuardSysExtension.systemextension */,
+				FAA35B4528FD335600205ECD /* com.sysvpn.client.macos.AppSysExtension.systemextension */,
 				FAFAAE1E290280A6006A69E3 /* OpenVpnAppExtension.appex */,
-				FAFAAE3A29028131006A69E3 /* WireGuardAppExtension.appex */,
 				FA5383192927332800C1DA1E /* SysVPNStarter.app */,
 			);
 			name = Products;
@@ -1438,10 +1362,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				FAA35B7728FD33DA00205ECD /* PBXTargetDependency */,
 				FA12F19A28FDA98B009753EE /* PBXTargetDependency */,
 				FAFAAE26290280A6006A69E3 /* PBXTargetDependency */,
-				FAFAAE4229028131006A69E3 /* PBXTargetDependency */,
 			);
 			name = "sysvpn-macos";
 			packageProductDependencies = (
@@ -1460,7 +1382,7 @@
 				FADFCE7629006C7600219BB0 /* Kingfisher */,
 			);
 			productName = "sysvpn-macos";
-			productReference = AC09D71728BCDCD40078E928 /* sysvpn-macos.app */;
+			productReference = AC09D71728BCDCD40078E928 /* SysVPNClient.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AC09D72728BCDCD80078E928 /* sysvpn-macosTests */ = {
@@ -1534,28 +1456,7 @@
 				FACEC9AE29046B6C0014ABC9 /* TunnelKitWireGuardAppExtension */,
 			);
 			productName = OpenVpnSysExtension;
-			productReference = FAA35B4528FD335600205ECD /* com.syspvn.client.macos.OpenVpnSysExtension.systemextension */;
-			productType = "com.apple.product-type.system-extension";
-		};
-		FAA35B6C28FD33DA00205ECD /* sysvpn-macosWireGuardSysExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FAA35B7928FD33DA00205ECD /* Build configuration list for PBXNativeTarget "sysvpn-macosWireGuardSysExtension" */;
-			buildPhases = (
-				FAA35B6928FD33DA00205ECD /* Sources */,
-				FAA35B6A28FD33DA00205ECD /* Frameworks */,
-				FAA35B6B28FD33DA00205ECD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FAA35B8B28FD36B300205ECD /* PBXTargetDependency */,
-			);
-			name = "sysvpn-macosWireGuardSysExtension";
-			packageProductDependencies = (
-				FAA35B7C28FD340600205ECD /* TunnelKitWireGuardAppExtension */,
-			);
-			productName = WireGuardSysExtension;
-			productReference = FAA35B6D28FD33DA00205ECD /* com.syspvn.client.macos.WireGuardSysExtension.systemextension */;
+			productReference = FAA35B4528FD335600205ECD /* com.sysvpn.client.macos.AppSysExtension.systemextension */;
 			productType = "com.apple.product-type.system-extension";
 		};
 		FAFAAE1D290280A6006A69E3 /* OpenVpnAppExtension */ = {
@@ -1577,27 +1478,6 @@
 			);
 			productName = OpenVpnAppExtension;
 			productReference = FAFAAE1E290280A6006A69E3 /* OpenVpnAppExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		FAFAAE3929028131006A69E3 /* WireGuardAppExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FAFAAE4429028131006A69E3 /* Build configuration list for PBXNativeTarget "WireGuardAppExtension" */;
-			buildPhases = (
-				FAFAAE3629028131006A69E3 /* Sources */,
-				FAFAAE3729028131006A69E3 /* Frameworks */,
-				FAFAAE3829028131006A69E3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9E4A04392907D10C00B059EA /* PBXTargetDependency */,
-			);
-			name = WireGuardAppExtension;
-			packageProductDependencies = (
-				FAFAAE49290281C1006A69E3 /* TunnelKitWireGuardAppExtension */,
-			);
-			productName = WireGuardAppExtension;
-			productReference = FAFAAE3A29028131006A69E3 /* WireGuardAppExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -1627,16 +1507,10 @@
 					FAA35B4428FD335600205ECD = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
-					FAA35B6C28FD33DA00205ECD = {
-						CreatedOnToolsVersion = 14.0.1;
-					};
 					FAA35B8628FD35A400205ECD = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 					FAFAAE1D290280A6006A69E3 = {
-						CreatedOnToolsVersion = 14.0.1;
-					};
-					FAFAAE3929028131006A69E3 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
@@ -1667,10 +1541,8 @@
 				AC09D72728BCDCD80078E928 /* sysvpn-macosTests */,
 				AC09D73128BCDCD80078E928 /* sysvpn-macosUITests */,
 				FAA35B4428FD335600205ECD /* sysvpn-macosOpenVPNTunnelExtension */,
-				FAA35B6C28FD33DA00205ECD /* sysvpn-macosWireGuardSysExtension */,
 				FAA35B8628FD35A400205ECD /* WireGuardKitGo */,
 				FAFAAE1D290280A6006A69E3 /* OpenVpnAppExtension */,
-				FAFAAE3929028131006A69E3 /* WireGuardAppExtension */,
 				FA5383182927332800C1DA1E /* SysVPNStarter */,
 			);
 		};
@@ -1721,21 +1593,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAA35B6B28FD33DA00205ECD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FAFAAE1C290280A6006A69E3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAFAAE3829028131006A69E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2002,24 +1860,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAA35B6928FD33DA00205ECD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FACEC9BC290503DA0014ABC9 /* CoreAppConstants.swift in Sources */,
-				FAA35B7328FD33DA00205ECD /* main.swift in Sources */,
-				FACEC9B82904F8310014ABC9 /* ExKeyChain.swift in Sources */,
-				FAA35BDA28FD442600205ECD /* CodeSignatureComparitor.swift in Sources */,
-				FAA35BE028FD443F00205ECD /* IPCBaseConnection.swift in Sources */,
-				FAA35BDE28FD443600205ECD /* IPCNetworkExtension.swift in Sources */,
-				FA12F1A428FDCBAD009753EE /* IPCHttpRequest.swift in Sources */,
-				FAA35B7128FD33DA00205ECD /* PacketTunnelProvider.swift in Sources */,
-				FAA35BD628FD441900205ECD /* IPCHelper.swift in Sources */,
-				FA00FA092934B7D900BC1AF7 /* ProtoAdapter.swift in Sources */,
-				FAA35BDC28FD442C00205ECD /* XPCBaseService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FAFAAE1A290280A6006A69E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2035,28 +1875,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAFAAE3629028131006A69E3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FACEC9BE290503DB0014ABC9 /* CoreAppConstants.swift in Sources */,
-				9E9C956F290A8699009B2FFE /* WireGuardAdapterEx.swift in Sources */,
-				FACEC9B72904F8300014ABC9 /* ExKeyChain.swift in Sources */,
-				9E9C956B290A83AA009B2FFE /* WireGuardTunnelAdapter.swift in Sources */,
-				9E9C9565290A834C009B2FFE /* IPCHelper.swift in Sources */,
-				FA00FA0B2934B7D900BC1AF7 /* ProtoAdapter.swift in Sources */,
-				FAFAAE3E29028131006A69E3 /* PacketTunnelProvider.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9E4A04392907D10C00B059EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FAA35B8628FD35A400205ECD /* WireGuardKitGo */;
-			targetProxy = 9E4A04382907D10C00B059EA /* PBXContainerItemProxy */;
-		};
 		AC09D72A28BCDCD80078E928 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AC09D71628BCDCD40078E928 /* sysvpn-macos */;
@@ -2072,25 +1893,10 @@
 			target = FAA35B4428FD335600205ECD /* sysvpn-macosOpenVPNTunnelExtension */;
 			targetProxy = FA12F19928FDA98B009753EE /* PBXContainerItemProxy */;
 		};
-		FAA35B7728FD33DA00205ECD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FAA35B6C28FD33DA00205ECD /* sysvpn-macosWireGuardSysExtension */;
-			targetProxy = FAA35B7628FD33DA00205ECD /* PBXContainerItemProxy */;
-		};
-		FAA35B8B28FD36B300205ECD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FAA35B8628FD35A400205ECD /* WireGuardKitGo */;
-			targetProxy = FAA35B8A28FD36B300205ECD /* PBXContainerItemProxy */;
-		};
 		FAFAAE26290280A6006A69E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAFAAE1D290280A6006A69E3 /* OpenVpnAppExtension */;
 			targetProxy = FAFAAE25290280A6006A69E3 /* PBXContainerItemProxy */;
-		};
-		FAFAAE4229028131006A69E3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FAFAAE3929028131006A69E3 /* WireGuardAppExtension */;
-			targetProxy = FAFAAE4129028131006A69E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2229,9 +2035,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"sysvpn-macos/Preview Content\"";
-				DEVELOPMENT_TEAM = J953BZ6B49;
+				DEVELOPMENT_TEAM = JM6FBPTUR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2243,9 +2049,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos;
+				PRODUCT_NAME = SysVPNClient;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "sysvpn-macos/sysvpn_macos_birdge_header.h";
@@ -2263,9 +2069,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"sysvpn-macos/Preview Content\"";
-				DEVELOPMENT_TEAM = J953BZ6B49;
+				DEVELOPMENT_TEAM = JM6FBPTUR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2277,9 +2083,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos;
+				PRODUCT_NAME = SysVPNClient;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "sysvpn-macos/sysvpn_macos_birdge_header.h";
@@ -2368,14 +2174,15 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = JM6FBPTUR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SysVPNStarter/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SysVPNStarter;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = SysVpn;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = SysVPN;
 				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2385,8 +2192,8 @@
 				LSApplicationCategoryType = "public.app-category.utilities";
 				LSBackgroundOnly = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syspvn.client.macos-starter";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sysvpn.client.macos-starter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -2406,14 +2213,15 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = JM6FBPTUR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SysVPNStarter/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SysVPNStarter;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = SysVpn;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = SysVPN;
 				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2423,8 +2231,8 @@
 				LSApplicationCategoryType = "public.app-category.utilities";
 				LSBackgroundOnly = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syspvn.client.macos-starter";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sysvpn.client.macos-starter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -2440,8 +2248,8 @@
 				CODE_SIGN_ENTITLEMENTS = OpenVpnSysExtension/OpenVpnSysExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = JM6FBPTUR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenVpnSysExtension/Info.plist;
@@ -2454,8 +2262,8 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos.OpenVpnSysExtension;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos.AppSysExtension;
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -2472,8 +2280,8 @@
 				CODE_SIGN_ENTITLEMENTS = OpenVpnSysExtension/OpenVpnSysExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = JM6FBPTUR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenVpnSysExtension/Info.plist;
@@ -2486,75 +2294,13 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos.OpenVpnSysExtension;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos.AppSysExtension;
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = OpenVpnSysExtension/open_vpn_sys_extension_birdge_header.h;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		FAA35B7A28FD33DA00205ECD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = WireGuardSysExtension/WireGuardSysExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WireGuardSysExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = WireGuardSysExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos.WireGuardSysExtension;
-				PRODUCT_NAME = "$(inherited)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = WireGuardSysExtension/wire_guard_sys_extension_birdge_header.h;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		FAA35B7B28FD33DA00205ECD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = WireGuardSysExtension/WireGuardSysExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WireGuardSysExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = WireGuardSysExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos.WireGuardSysExtension;
-				PRODUCT_NAME = "$(inherited)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = WireGuardSysExtension/wire_guard_sys_extension_birdge_header.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -2595,8 +2341,8 @@
 				CODE_SIGN_ENTITLEMENTS = OpenVpnAppExtension/OpenVpnAppExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = JM6FBPTUR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenVpnAppExtension/Info.plist;
@@ -2608,8 +2354,8 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos.OpenVpnAppExtension;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos.AppVpnAppExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -2626,8 +2372,8 @@
 				CODE_SIGN_ENTITLEMENTS = OpenVpnAppExtension/OpenVpnAppExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = JM6FBPTUR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenVpnAppExtension/Info.plist;
@@ -2639,71 +2385,13 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos.OpenVpnAppExtension;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos.AppVpnAppExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = OpenVpnSysExtension/open_vpn_sys_extension_birdge_header.h;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		FAFAAE4529028131006A69E3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = WireGuardAppExtension/WireGuardAppExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WireGuardAppExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = WireGuardAppExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos.WireGuardAppExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		FAFAAE4629028131006A69E3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = WireGuardAppExtension/WireGuardAppExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J953BZ6B49;
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WireGuardAppExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = WireGuardAppExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syspvn.client.macos.WireGuardAppExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -2765,15 +2453,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FAA35B7928FD33DA00205ECD /* Build configuration list for PBXNativeTarget "sysvpn-macosWireGuardSysExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FAA35B7A28FD33DA00205ECD /* Debug */,
-				FAA35B7B28FD33DA00205ECD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		FAA35B8728FD35A500205ECD /* Build configuration list for PBXLegacyTarget "WireGuardKitGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2788,15 +2467,6 @@
 			buildConfigurations = (
 				FAFAAE29290280A6006A69E3 /* Debug */,
 				FAFAAE2A290280A6006A69E3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FAFAAE4429028131006A69E3 /* Build configuration list for PBXNativeTarget "WireGuardAppExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FAFAAE4529028131006A69E3 /* Debug */,
-				FAFAAE4629028131006A69E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2921,10 +2591,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = TunnelKitOpenVPNAppExtension;
 		};
-		FAA35B7C28FD340600205ECD /* TunnelKitWireGuardAppExtension */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TunnelKitWireGuardAppExtension;
-		};
 		FAA35B8C28FD37C700205ECD /* TunnelKitOpenVPN */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TunnelKitOpenVPN;
@@ -2945,10 +2611,6 @@
 		FAFAAE47290281BC006A69E3 /* TunnelKitOpenVPNAppExtension */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TunnelKitOpenVPNAppExtension;
-		};
-		FAFAAE49290281C1006A69E3 /* TunnelKitWireGuardAppExtension */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TunnelKitWireGuardAppExtension;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

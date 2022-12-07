@@ -9,25 +9,24 @@ import SwiftUI
 
 struct HomeProfileMenuView: View {
     var sizeDot: CGFloat = 4.0
-    @StateObject var viewModel = HomeProfileMenuViewModel() 
+    @StateObject var viewModel = HomeProfileMenuViewModel()
     var onTapCreate: (() -> Void)?
     var onTapMore: (() -> Void)?
     var body: some View {
-        VStack (spacing: 10) {
-            if viewModel.listShow.count == 0 || viewModel.listShow.isEmpty {
+        VStack(spacing: 10) {
+            if viewModel.listShow.isEmpty || viewModel.listShow.isEmpty {
                 profileEmptyView
             } else {
-                ForEach (viewModel.listShow) { item in
+                ForEach(viewModel.listShow) { item in
                     ItemProfile(title: item.profileName ?? "")
                         .contentShape(Rectangle())
                         .onTapGesture {
-                            viewModel.connect(to: item.serverId) 
+                            viewModel.connect(to: item.serverId)
                         }
                 }
                 footerProfile
                     .padding(.top, 10)
             }
-            
         }
         .padding(.horizontal, 16)
     }
@@ -51,7 +50,7 @@ struct HomeProfileMenuView: View {
             .background(Asset.Colors.dividerColor.swiftUIColor)
             .cornerRadius(18)
             .contentShape(Rectangle())
-            .onTapGesture { 
+            .onTapGesture {
                 onTapMore?()
             }
             
@@ -68,8 +67,7 @@ struct HomeProfileMenuView: View {
                 }
             }
             .frame(height: 36)
-            .buttonStyle(ButtonCTAStyle(bgColor:Asset.Colors.bgButtonColor.swiftUIColor ))
-            
+            .buttonStyle(ButtonCTAStyle(bgColor: Asset.Colors.bgButtonColor.swiftUIColor))
         }
     }
     
@@ -94,7 +92,7 @@ struct HomeProfileMenuView: View {
                     }
                 }
                 .frame(height: 36)
-                .buttonStyle(ButtonCTAStyle(bgColor:Asset.Colors.bgButtonColor.swiftUIColor ))
+                .buttonStyle(ButtonCTAStyle(bgColor: Asset.Colors.bgButtonColor.swiftUIColor))
                 .padding(.bottom, 16)
             }
             .padding(.horizontal, 16)
@@ -124,6 +122,5 @@ struct ItemProfile: View {
         .overlay(RoundedRectangle(cornerRadius: 18).stroke(style: .init(lineWidth: 1.1))
             .foregroundColor(Asset.Colors.dividerColor.swiftUIColor))
     }
-    
 }
  

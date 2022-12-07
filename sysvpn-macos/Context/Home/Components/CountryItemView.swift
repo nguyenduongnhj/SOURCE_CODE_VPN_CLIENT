@@ -29,7 +29,7 @@ struct CountryItemView: View {
                 Text(countryName)
                     .foregroundColor(Color.white)
                     .font(Font.system(size: 13, weight: .semibold))
-                Text(totalCity > 1 ?  L10n.Global.countryCitiesSubtitle(totalCity) : L10n.Global.countrySingleSubtitle)
+                Text(totalCity > 1 ? L10n.Global.countryCitiesSubtitle(totalCity) : L10n.Global.countrySingleSubtitle)
                     .foregroundColor(Asset.Colors.subTextColor.swiftUIColor)
                     .font(Font.system(size: 12, weight: .regular))
             }
@@ -128,7 +128,7 @@ struct MultiHopItemView: View {
                 .font(Font.system(size: 13, weight: .semibold))
             Spacer()
         }.padding(.bottom, 8)
-        .contentShape(Rectangle())
+            .contentShape(Rectangle())
     }
 }
 
@@ -178,7 +178,7 @@ struct StaticItemView: View {
                     .clipShape(CustomProcessShape(percent: percent))
             }
         }.padding(.bottom, 10)
-        .contentShape(Rectangle()) 
+            .contentShape(Rectangle())
     }
 }
 

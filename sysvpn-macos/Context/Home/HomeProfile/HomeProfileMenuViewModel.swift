@@ -5,13 +5,12 @@
 //  Created by doragon on 28/11/2022.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 extension HomeProfileMenuView {
-    
-    @MainActor class HomeProfileMenuViewModel: ObservableObject { 
-        @Published var test = [1,2,3]
+    @MainActor class HomeProfileMenuViewModel: ObservableObject {
+        @Published var test = [1, 2, 3]
         @Published var listShow: [UserProfileTemp]
         var changeSink: AnyCancellable?
         init() {
@@ -20,14 +19,14 @@ extension HomeProfileMenuView {
             listen()
         }
         
-        func loadData () {
+        func loadData() {
             listShow = []
             if GlobalAppStates.shared.listProfile.isEmpty {
                 AppDataManager.shared.readListProfile()
             }
             let listProfile = GlobalAppStates.shared.listProfile
             
-            if listProfile.count >= 3{
+            if listProfile.count >= 3 {
                 listShow.append(listProfile[0])
                 listShow.append(listProfile[1])
                 listShow.append(listProfile[2])
@@ -36,7 +35,7 @@ extension HomeProfileMenuView {
             }
         }
         
-        func listen(){
+        func listen() {
             changeSink = GlobalAppStates.shared.$listProfile.sink { listProfile in
                 self.listShow = []
                 if listProfile.count >= 3 {
@@ -47,12 +46,9 @@ extension HomeProfileMenuView {
                     self.listShow = listProfile
                 }
             }
-    
         }
         
-        func onCreateProfile() {
-            
-        }
+        func onCreateProfile() {}
         
         func connect(to idCountry: Int? = nil) {
             MapAppStates.shared.connectedNode = nil
@@ -67,8 +63,4 @@ extension HomeProfileMenuView {
                 .vpnCore.connectTo(node: node, isRetry: false)
         }
     }
-    
 }
-
-
-

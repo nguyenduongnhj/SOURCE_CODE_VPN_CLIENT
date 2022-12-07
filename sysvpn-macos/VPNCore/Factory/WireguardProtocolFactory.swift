@@ -50,7 +50,7 @@ class WireguardProtocolFactory {
 
 extension WireguardProtocolFactory: VpnProtocolFactory {
     func create(_ configuration: SysVpnManagerConfiguration) throws -> NEVPNProtocol {
-        let vpnProto =  try getWireguardConfig(for: configuration).asTunnelProtocol(withBundleIdentifier: bundleId, extra: configuration.extra)
+        let vpnProto = try getWireguardConfig(for: configuration).asTunnelProtocol(withBundleIdentifier: bundleId, extra: configuration.extra)
  
         vpnProto.providerConfiguration?[CoreAppConstants.VPNProtocolName.configurationField] = CoreAppConstants.VPNProtocolName.wireguard
         

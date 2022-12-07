@@ -42,8 +42,6 @@ struct LoginButtonCTAStyle: ButtonStyle {
     }
 }
 
-
-
 struct ButtonCTAStyle: ButtonStyle {
     var bgColor: Color = Asset.Colors.primaryColor.swiftUIColor
     var bgColorDissable: Color = Asset.Colors.backgroundButtonDisable.swiftUIColor
@@ -75,7 +73,6 @@ struct ButtonCTAStyle: ButtonStyle {
         }
     }
 }
-
 
 struct ActionButtonStyle: ButtonStyle {
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {

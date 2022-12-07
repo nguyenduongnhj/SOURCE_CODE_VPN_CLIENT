@@ -13,8 +13,8 @@ struct HomeListProfileView: View {
     var onTapCreate: (() -> Void)?
     var onTapRename: ((_ item: UserProfileTemp) -> Void)?
     var onTapChangeLocation: ((_ item: UserProfileTemp) -> Void)?
-    var onClose: (()-> Void)?
-    var onTapItem:  ((_ item: UserProfileTemp) -> Void)?
+    var onClose: (() -> Void)?
+    var onTapItem: ((_ item: UserProfileTemp) -> Void)?
     
     var listFilter: [HomeListProfileModel] {
         if viewModel.textInput.isEmpty {
@@ -29,7 +29,7 @@ struct HomeListProfileView: View {
     var body: some View {
         VStack(alignment: .leading) {
             headerListProfile
-            Spacer().frame(height: 24 )
+            Spacer().frame(height: 24)
             ScrollView([.vertical], showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 0) {
                     ForEach(listFilter) { item in
@@ -76,7 +76,6 @@ struct HomeListProfileView: View {
                                         .font(Font.system(size: 12, weight: .regular))
                                     Spacer().frame(height: 20)
                                 }
-                                
                             }
                         }
                     }
@@ -87,9 +86,8 @@ struct HomeListProfileView: View {
         .frame(maxHeight: .infinity)
     }
     
-    
     var headerListProfile: some View {
-        HStack (spacing: 16){
+        HStack(spacing: 16) {
             SearchInputView(textInput: $viewModel.textInput)
                 .padding(.top, 2)
             HStack(spacing: 8) {
@@ -107,9 +105,7 @@ struct HomeListProfileView: View {
             }
         }
     }
-      
 }
-
 
 struct HomeItemProfile: View {
     var sizeDot: CGFloat = 4.0
@@ -121,10 +117,8 @@ struct HomeItemProfile: View {
     var onRename: @MainActor () -> Void
     var onDelete: @MainActor () -> Void
     
-    
-    
     var body: some View {
-        HStack (spacing: 16) {
+        HStack(spacing: 16) {
             Asset.Assets.icGame.swiftUIImage
                 .resizable()
                 .frame(width: 16, height: 16)
@@ -168,7 +162,7 @@ struct HomeItemProfile: View {
                             onSetlocation()
                             isShowPopover = false
                         }
-                        HStack (alignment: .center, spacing: 10) {
+                        HStack(alignment: .center, spacing: 10) {
                             Asset.Assets.icArrowToTop.swiftUIImage
                                 .resizable()
                                 .frame(width: 14, height: 14)
@@ -183,7 +177,7 @@ struct HomeItemProfile: View {
                             onPickToTop()
                             isShowPopover = false
                         }
-                        HStack (alignment: .center, spacing: 10){
+                        HStack(alignment: .center, spacing: 10) {
                             Asset.Assets.icWrite.swiftUIImage
                                 .resizable()
                                 .frame(width: 14, height: 14)
@@ -198,7 +192,7 @@ struct HomeItemProfile: View {
                             onRename()
                             isShowPopover = false
                         }
-                        HStack (alignment: .center, spacing: 10){
+                        HStack(alignment: .center, spacing: 10) {
                             Asset.Assets.icTrash.swiftUIImage
                                 .resizable()
                                 .frame(width: 14, height: 14)
@@ -229,7 +223,6 @@ enum HomeListProfileModelType {
     case body
     case spacing
 }
-
 
 struct HomeListProfileModel: Identifiable, Equatable {
     static func == (lhs: HomeListProfileModel, rhs: HomeListProfileModel) -> Bool {

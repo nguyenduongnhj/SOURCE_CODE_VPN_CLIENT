@@ -44,8 +44,8 @@ extension AppDataManager {
                     AppDataManager.shared.saveIpInfo(info: response.ipInfo)
                     AppDataManager.shared.userSetting = response
                 }
-                
-                if AppDataManager.shared.lastChange > 0 && AppDataManager.shared.lastChange != (response.lastChange ?? 0) {
+                // AppDataManager.shared.lastChange > 0 && 
+                if AppDataManager.shared.lastChange != (response.lastChange ?? 0) {
                     NotificationCenter.default.post(name: .needUpdateServerInfo, object: nil)
                 }
                 AppDataManager.shared.lastChange = response.lastChange ?? 0

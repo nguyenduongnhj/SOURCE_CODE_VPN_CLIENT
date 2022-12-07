@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RenameProfileComponent: View {
-    
     @State var itemEdit: UserProfileTemp?
     @State var profileInput: String = ""
     @State var isShowErrorEmptyName: Bool = false
@@ -20,7 +19,7 @@ struct RenameProfileComponent: View {
             VStack(spacing: 24) {
                 profileInputItem
             
-                HStack (spacing: 16){
+                HStack(spacing: 16) {
                     Button {
                         onCancel?()
                     } label: {
@@ -29,7 +28,7 @@ struct RenameProfileComponent: View {
                             .font(Font.system(size: 13, weight: .semibold))
                     }
                     .frame(height: 40)
-                    .buttonStyle(ButtonCTAStyle(bgColor:Asset.Colors.popoverBgSelected.swiftUIColor, radius: 6))
+                    .buttonStyle(ButtonCTAStyle(bgColor: Asset.Colors.popoverBgSelected.swiftUIColor, radius: 6))
                      
                     Button {
                         if profileInput.isEmpty || profileInput == "" {
@@ -58,7 +57,7 @@ struct RenameProfileComponent: View {
                             .font(Font.system(size: 13, weight: .semibold))
                     }
                     .frame(height: 40)
-                    .buttonStyle(ButtonCTAStyle(bgColor:Asset.Colors.primaryColor.swiftUIColor, radius: 6))
+                    .buttonStyle(ButtonCTAStyle(bgColor: Asset.Colors.primaryColor.swiftUIColor, radius: 6))
                 }
             }
             .padding(32)
@@ -69,7 +68,6 @@ struct RenameProfileComponent: View {
         .frame(width: 450, height: 230, alignment: .center)
         .frame(minWidth: 10, maxWidth: 450)
     }
-    
     
     var profileInputItem: some View {
         VStack(alignment: .leading, spacing: 12) {

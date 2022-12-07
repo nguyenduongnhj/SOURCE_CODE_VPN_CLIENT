@@ -14,7 +14,7 @@ struct UserProfileResult: Codable {
         case listProfile
     }
     
-    init(){}
+    init() {}
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -31,7 +31,6 @@ struct UserProfileResult: Codable {
 }
 
 extension AppDataManager {
-    
     func saveProfile() {
         var profile = UserProfileResult()
         profile.listProfile = GlobalAppStates.shared.listProfile
@@ -41,5 +40,4 @@ extension AppDataManager {
     func readListProfile() {
         GlobalAppStates.shared.listProfile = UserProfileResult.getUserProfile()?.listProfile ?? []
     }
-    
 }

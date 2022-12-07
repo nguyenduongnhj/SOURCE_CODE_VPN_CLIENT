@@ -10,7 +10,8 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>J953BZ6B49.group.com.syspvn.macos</string>
+		<string>$(TeamIdentifierPrefix)group.com.sysvpn.macos</string>
+		<string>group.com.sysvpn.macos</string>
 	</array>
 	<key>com.apple.security.network.client</key>
 	<true/>
@@ -18,7 +19,8 @@
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)group.com.syspvn.macos</string>
+		<string>$(AppIdentifierPrefix)group.com.sysvpn.macos</string>
+		<string>$(AppIdentifierPrefix)JM6FBPTUR3.group.com.sysvpn.macos</string>
 	</array>
 </dict>
 </plist>

@@ -13,22 +13,19 @@ protocol UserProfileProtocol {
     func getProfileIcon()
 }
 
-
 struct UserProfileTemp: Codable, UserProfileProtocol, Identifiable {
-    func getProfileName() -> String?{
+    func getProfileName() -> String? {
         return profileName
     }
     
-    func getServerId() -> Int?{
+    func getServerId() -> Int? {
         return serverId
     }
     
-    func getProfileIcon() {
-        
-    }
+    func getProfileIcon() {}
     
     enum CodingKeys: String, CodingKey {
-        case profileName 
+        case profileName
         case serverId
         case profileId
     }
@@ -36,9 +33,9 @@ struct UserProfileTemp: Codable, UserProfileProtocol, Identifiable {
     var profileName: String?
     var serverId: Int?
     var profileId: UUID?
-    var id: UUID = UUID()
+    var id: UUID = .init()
     
-    static func getFakeData() -> [UserProfileTemp]{ 
+    static func getFakeData() -> [UserProfileTemp] {
         var item = UserProfileTemp()
         item.profileName = "Gaming"
         item.serverId = 34
@@ -48,11 +45,9 @@ struct UserProfileTemp: Codable, UserProfileProtocol, Identifiable {
         return listTemp
     }
     
-    static func loadDataProfile() {
-        
-    }
+    static func loadDataProfile() {}
     
-    init(){}
+    init() {}
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -69,5 +64,3 @@ struct UserProfileTemp: Codable, UserProfileProtocol, Identifiable {
         return UserProfileTemp.readFile(fileName: .keySaveUserProfile) as? UserProfileTemp
     }
 }
-
-

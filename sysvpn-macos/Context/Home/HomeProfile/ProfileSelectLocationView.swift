@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProfileSelectLocationView: View {
-    
     var onCancel: (() -> Void)?
     var isEdit: Bool = false
     @StateObject var viewModel = ProfileSelectLocationViewModel()
@@ -31,14 +30,14 @@ struct ProfileSelectLocationView: View {
     }
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 24) {
+        VStack(alignment: .leading, spacing: 24) {
             if !isEdit {
                 profileInputItem
-            } 
+            }
             searchItem
             listItemCountry
                 .frame(height: viewModel.isShowErrorEmptyCountry ? 240 : 230)
-            HStack (spacing: 16){
+            HStack(spacing: 16) {
                 Button {
                     onCancel?()
                 } label: {
@@ -47,10 +46,10 @@ struct ProfileSelectLocationView: View {
                         .font(Font.system(size: 13, weight: .semibold))
                 }
                 .frame(height: 40)
-                .buttonStyle(ButtonCTAStyle(bgColor:Asset.Colors.popoverBgSelected.swiftUIColor, radius: 6))
+                .buttonStyle(ButtonCTAStyle(bgColor: Asset.Colors.popoverBgSelected.swiftUIColor, radius: 6))
                  
                 Button {
-                    if isEdit { 
+                    if isEdit {
                         if GlobalAppStates.shared.listProfile.isEmpty {
                             AppDataManager.shared.readListProfile()
                         }
@@ -77,14 +76,13 @@ struct ProfileSelectLocationView: View {
                         .font(Font.system(size: 13, weight: .semibold))
                 }
                 .frame(height: 40)
-                .buttonStyle(ButtonCTAStyle(bgColor:Asset.Colors.primaryColor.swiftUIColor, radius: 6))
+                .buttonStyle(ButtonCTAStyle(bgColor: Asset.Colors.primaryColor.swiftUIColor, radius: 6))
             }
         }
         .padding(32)
         .frame(width: 470, height: isEdit ? 470 : viewModel.isShowErrorEmptyName ? 600 : 580)
         .background(Asset.Colors.bodySettingColor.swiftUIColor)
         .cornerRadius(16)
-        
     }
     
     var profileInputItem: some View {
@@ -108,7 +106,6 @@ struct ProfileSelectLocationView: View {
                     .font(Font.system(size: 13, weight: .regular))
             }
         }
-        
     }
     
     var searchItem: some View {
@@ -130,11 +127,11 @@ struct ProfileSelectLocationView: View {
     }
     
     var listItemCountry: some View {
-        VStack (alignment: .leading, spacing: 10) {
-            ScrollView (showsIndicators: false) {
-                LazyVGrid (columns: adaptiveColums, alignment: .leading, spacing: 16) {
-                    ForEach (listFilter) { item in
-                        HStack (spacing: 0) {
+        VStack(alignment: .leading, spacing: 10) {
+            ScrollView(showsIndicators: false) {
+                LazyVGrid(columns: adaptiveColums, alignment: .leading, spacing: 16) {
+                    ForEach(listFilter) { item in
+                        HStack(spacing: 0) {
                             if item.image != nil {
                                 item.image!
                                     .resizable()
@@ -146,7 +143,7 @@ struct ProfileSelectLocationView: View {
                                     .resizable()
                                     .frame(width: 28, height: 28)
                                     .cornerRadius(14)
-                            } 
+                            }
                             Text(item.name ?? "")
                                 .foregroundColor(Color.white)
                                 .font(Font.system(size: 12, weight: .regular))
@@ -167,10 +164,7 @@ struct ProfileSelectLocationView: View {
                     .foregroundColor(Asset.Colors.textErrorColor.swiftUIColor)
                     .font(Font.system(size: 13, weight: .regular))
             }
-            
         }
-        
     }
-    
 }
  

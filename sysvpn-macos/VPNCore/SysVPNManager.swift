@@ -287,7 +287,7 @@ class SysVPNManager: SysVPNManagerProtocol {
         }
     }
     
-    @objc private func vpnStatusChanged() { 
+    @objc private func vpnStatusChanged() {
         setState()
     }
     

@@ -9,8 +9,8 @@
 import Foundation
 
 enum IPCServiceProto: String {
-    case openVPN = "com.syspvn.macos.openvpn"
-    case wireGuard = "com.syspvn.macos.wireguard"
+    case openVPN = "com.sysvpn.macos.openvpn"
+    case wireGuard = "com.sysvpn.macos.wireguard"
 
     public var machServiceName: String {
         let teamId = CoreAppConstants.AppGroups.teamId
