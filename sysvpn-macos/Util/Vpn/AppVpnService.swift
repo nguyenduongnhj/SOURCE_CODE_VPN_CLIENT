@@ -14,7 +14,17 @@ class AppVpnService: SysVPNService {
         // let userSetting = AppDataManager.shared.userSetting
         cancelPrepare?.dispose()
         cancelPrepare = nil
-        var appProtocol = PropertiesManager.shared.vpnProtocol
+        
+        
+        
+        var appProtocol = PropertiesManager.shared.vpnProtocol 
+        
+        if appProtocol == nil {
+            let userSetting = AppDataManager.shared.userSetting?.appSettings?.settingVpn
+            let defaultVAlue: VpnProtocol = (userSetting?.defaultTech?.contains("wg") ?? true) ? .wireGuard : .openVpn((userSetting?.defaultProtocol?.contains("udp") ?? false) ? .udp : .tcp)
+            appProtocol = defaultVAlue
+        }
+        
         let isWireGuard = appProtocol == .wireGuard
         var transportProtocol = OpenVpnTransport.udp
         if case let .openVpn(transport) = appProtocol {

@@ -16,7 +16,11 @@ extension VpnSettingView {
             listItem = []
             let listCountry = AppDataManager.shared.userCountry?.availableCountries ?? []
             let countryQuickConnect = PropertiesManager.shared.countryQuickConnect
-            let defaulProto = PropertiesManager.shared.vpnProtocol == .wireGuard ? "WireGuard" : (PropertiesManager.shared.vpnProtocol == .openVpn(.tcp) ? "OpenVPN (TCP)" : "OpenVPN (UDP)")
+            var defaulProto = PropertiesManager.shared.vpnProtocol == .wireGuard ? "WireGuard" : (PropertiesManager.shared.vpnProtocol == .openVpn(.tcp) ? "OpenVPN (TCP)" : "OpenVPN (UDP)")
+            if PropertiesManager.shared.vpnProtocol == nil {
+                defaulProto = "Auto"
+            }
+            
             let countrySelected = listCountry.filter { item in
                 return countryQuickConnect == item.id
             }.first
@@ -24,7 +28,7 @@ extension VpnSettingView {
             let itemAutoConnect = SwitchSettingItem(settingName: L10n.Global.autoConnect, settingDesc: L10n.Global.autoConnectDesc, settingValue: PropertiesManager.shared.getAutoConnect(for: AppDataManager.shared.userData?.email ?? "default").enabled, itemType: .autoConnect)
             let killSwitch = SwitchSettingItem(settingName: L10n.Global.killSwitch, settingDesc: L10n.Global.killSwitchDesc, settingValue: PropertiesManager.shared.killSwitch, itemType: .killSwitch)
             let cyberSec = SwitchSettingItem(settingName: L10n.Global.cyberSec, settingDesc: L10n.Global.cyberSecDesc, settingValue: PropertiesManager.shared.cybersec, itemType: .cyberSec)
-            let typeConnect = SelectSettingItem<String>(settingName: L10n.Global.protocol, settingValue: defaulProto, settingData: ["OpenVPN (TCP)", "OpenVPN (UDP)", "WireGuard"])
+            let typeConnect = SelectSettingItem<String>(settingName: L10n.Global.protocol, settingValue: defaulProto, settingData: ["OpenVPN (TCP)", "OpenVPN (UDP)", "WireGuard", "Auto"])
             let optionQuickConnect = SelectSettingItem<CountryAvailables>(settingName: L10n.Global.quickConnectSetting, settingValue: countrySelected, settingData: listCountry)
   
             listItem.append(itemAutoConnect)
@@ -54,8 +58,10 @@ extension VpnSettingView {
                 } else if value.contains("OpenVPN (UDP)") {
                     print("value: UDP")
                     PropertiesManager.shared.vpnProtocol = .openVpn(.udp)
-                } else {
+                } else if value.contains("WireGuard") {
                     PropertiesManager.shared.vpnProtocol = .wireGuard
+                } else {
+                    PropertiesManager.shared.vpnProtocol = nil
                 }
             }
         }

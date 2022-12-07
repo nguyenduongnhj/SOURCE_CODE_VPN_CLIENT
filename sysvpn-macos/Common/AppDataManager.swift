@@ -185,6 +185,10 @@ class AppDataManager {
             return _userEtting
         }
         set {
+            objc_sync_enter(self)
+            defer{
+                objc_sync_exit(self)
+            }
             _userEtting = newValue
             _userEtting?.saveUserSetting()
         }
