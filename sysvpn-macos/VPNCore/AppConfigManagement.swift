@@ -181,15 +181,18 @@ class PropertiesManager: PropertiesManagerProtocol {
         }
     }
     
-    var vpnProtocol: VpnProtocol {
+    var vpnProtocol: VpnProtocol? {
         get {
-            let userSetting = AppDataManager.shared.userSetting?.appSettings?.settingVpn
-            let defaultVAlue: VpnProtocol = (userSetting?.defaultTech?.contains("wg") ?? true) ? .wireGuard : .openVpn((userSetting?.defaultProtocol?.contains("udp") ?? false) ? .udp : .tcp)
-           
-            return VpnProtocol.readUserDefault(keyUserDefault: Keys.vpnProtocol.rawValue) ?? defaultVAlue
+             
+            return VpnProtocol.readUserDefault(keyUserDefault: Keys.vpnProtocol.rawValue)
         }
         set {
-            newValue.saveUserDefault(keyUserDefault: Keys.vpnProtocol.rawValue)
+            if newValue == nil {
+                UserDefaults.standard.removeObject(forKey: Keys.vpnProtocol.rawValue)
+            } else {
+                newValue.saveUserDefault(keyUserDefault: Keys.vpnProtocol.rawValue)
+            }
+           
         }
     }
     

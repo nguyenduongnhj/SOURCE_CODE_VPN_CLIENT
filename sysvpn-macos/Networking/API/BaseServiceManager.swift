@@ -49,7 +49,7 @@ class BaseServiceManager<API: TargetType> {
     
     func requestIPC(_ api: API) -> Single<Response> {
         if !(IPCFactory.makeIPCRequestService().isConnected) {
-            return provider.rx.request(api)
+            return request(api)
         }
         
         return provider.rx.requestIPC(api)

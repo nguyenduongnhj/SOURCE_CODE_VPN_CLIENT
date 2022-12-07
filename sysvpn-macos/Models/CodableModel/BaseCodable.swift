@@ -46,7 +46,7 @@ extension Encodable {
         }
     }
     
-    func saveFile(fileName: String) {
+    func saveFile(fileName: String) { 
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self) {
             print("[CacheConfig] save data to file \(fileName) success")
@@ -57,6 +57,7 @@ extension Encodable {
             let urlFile = directory.appendingPathComponent(fileName)
             try? encoded.write(to: urlFile)
         }
+        
     }
 }
 
