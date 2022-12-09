@@ -79,7 +79,8 @@ extension APIService: TargetType {
     // In this example we will not pass anything in the body of the request.
     var task: Task {
         var param: [String: Any] = [:]
-        param["deviceInfo"] = nil
+        param["deviceInfo"] = nil 
+        param["deviceInfo"] = AppSetting.shared.getDeviceInfo()
         switch self {
         case .getAppSettings:
             param["platform"] = "macos"
@@ -87,7 +88,6 @@ extension APIService: TargetType {
         case let .login(email, password):
             param["email"] = email
             param["password"] = password
-            param["deviceInfo"] = AppSetting.shared.getDeviceInfo()
             return .requestParameters(parameters: param, encoding: URLEncoding.default)
         case .logout:
             param["refreshToken"] = AppDataManager.shared.refreshToken

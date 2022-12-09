@@ -145,6 +145,11 @@
 		B9B3706428FE5FE40022498B /* AppVpnService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3706328FE5FE40022498B /* AppVpnService.swift */; };
 		B9B3706828FEAB090022498B /* ListServerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3706628FEAB080022498B /* ListServerState.swift */; };
 		B9B3706928FEAB090022498B /* ServerStateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3706728FEAB090022498B /* ServerStateResult.swift */; };
+		B9D4F6F02941F81C0039BC77 /* ASN1 in Frameworks */ = {isa = PBXBuildFile; productRef = B9D4F6EF2941F81C0039BC77 /* ASN1 */; };
+		B9D4F6F62941F8CE0039BC77 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D4F6F22941F8CE0039BC77 /* PublicKey.swift */; };
+		B9D4F6F72941F8CE0039BC77 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D4F6F32941F8CE0039BC77 /* Signature.swift */; };
+		B9D4F6F82941F8CE0039BC77 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D4F6F42941F8CE0039BC77 /* PrivateKey.swift */; };
+		B9D4F6F92941F8CE0039BC77 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D4F6F52941F8CE0039BC77 /* Base64.swift */; };
 		B9D7F70E28D21421008B1D39 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F70D28D21421008B1D39 /* HomeView.swift */; };
 		B9D7F71228D2E3C5008B1D39 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71128D2E3C5008B1D39 /* UIColor+Extension.swift */; };
 		B9D7F71528D330BF008B1D39 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71428D330BE008B1D39 /* BaseModel.swift */; };
@@ -483,6 +488,10 @@
 		B9B3706328FE5FE40022498B /* AppVpnService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVpnService.swift; sourceTree = "<group>"; };
 		B9B3706628FEAB080022498B /* ListServerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListServerState.swift; sourceTree = "<group>"; };
 		B9B3706728FEAB090022498B /* ServerStateResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerStateResult.swift; sourceTree = "<group>"; };
+		B9D4F6F22941F8CE0039BC77 /* PublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
+		B9D4F6F32941F8CE0039BC77 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		B9D4F6F42941F8CE0039BC77 /* PrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
+		B9D4F6F52941F8CE0039BC77 /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
 		B9D7F70D28D21421008B1D39 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B9D7F71128D2E3C5008B1D39 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B9D7F71428D330BE008B1D39 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -589,6 +598,7 @@
 				AC09D74A28BCDE7A0078E928 /* CombineMoya in Frameworks */,
 				AC09D74E28BCDE7A0078E928 /* ReactiveMoya in Frameworks */,
 				B99DB42928E449A700331AFB /* PopupView in Frameworks */,
+				B9D4F6F02941F81C0039BC77 /* ASN1 in Frameworks */,
 				FAA35B8F28FD37CE00205ECD /* TunnelKitWireGuard in Frameworks */,
 				AC09D79428BE08460078E928 /* GoogleSignInSwift in Frameworks */,
 				FADFCE7729006C7600219BB0 /* Kingfisher in Frameworks */,
@@ -951,6 +961,7 @@
 		B99DB42328E4496300331AFB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				B9D4F6F12941F8CE0039BC77 /* Ecc */,
 				B9B3706228FE5FCB0022498B /* Vpn */,
 				FA12F19B28FDAE9D009753EE /* Networking */,
 				9E3756C728E6DB9D00E95C64 /* Extension */,
@@ -1164,6 +1175,17 @@
 				B9B3706628FEAB080022498B /* ListServerState.swift */,
 			);
 			path = ServerState;
+			sourceTree = "<group>";
+		};
+		B9D4F6F12941F8CE0039BC77 /* Ecc */ = {
+			isa = PBXGroup;
+			children = (
+				B9D4F6F22941F8CE0039BC77 /* PublicKey.swift */,
+				B9D4F6F32941F8CE0039BC77 /* Signature.swift */,
+				B9D4F6F42941F8CE0039BC77 /* PrivateKey.swift */,
+				B9D4F6F52941F8CE0039BC77 /* Base64.swift */,
+			);
+			path = Ecc;
 			sourceTree = "<group>";
 		};
 		B9D7F70C28D213FF008B1D39 /* Home */ = {
@@ -1458,6 +1480,7 @@
 				FAA35B8C28FD37C700205ECD /* TunnelKitOpenVPN */,
 				FAA35B8E28FD37CE00205ECD /* TunnelKitWireGuard */,
 				FADFCE7629006C7600219BB0 /* Kingfisher */,
+				B9D4F6EF2941F81C0039BC77 /* ASN1 */,
 			);
 			productName = "sysvpn-macos";
 			productReference = AC09D71728BCDCD40078E928 /* sysvpn-macos.app */;
@@ -1658,6 +1681,7 @@
 				B99DB42728E449A700331AFB /* XCRemoteSwiftPackageReference "PopupView" */,
 				9E3756CA28E6DCA600E95C64 /* XCRemoteSwiftPackageReference "SwiftUI-Tooltip" */,
 				FADFCE7529006C7600219BB0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B9D4F6EE2941F81C0039BC77 /* XCRemoteSwiftPackageReference "ASN1" */,
 			);
 			productRefGroup = AC09D71828BCDCD40078E928 /* Products */;
 			projectDirPath = "";
@@ -1821,6 +1845,7 @@
 				FA5382E529272FA800C1DA1E /* SettingUtils.swift in Sources */,
 				FA8DEA8A291956F1000A6818 /* LogFunc.swift in Sources */,
 				B9B3706128FE5A0C0022498B /* LocalJsonFile.swift in Sources */,
+				B9D4F6F82941F8CE0039BC77 /* PrivateKey.swift in Sources */,
 				AC09D79A28BE0F340078E928 /* Strings+Generated.swift in Sources */,
 				FAA35BC828FD41CB00205ECD /* IPCBaseConnection.swift in Sources */,
 				B991D52A28E6CE9300BFB6E4 /* MenuQuickAccessModel.swift in Sources */,
@@ -1834,6 +1859,7 @@
 				B9A69D2A292DD17800E6A76F /* PopupConfirmSignOutView.swift in Sources */,
 				B94AA08E2939F21200E734B3 /* AppDataManager+Profile.swift in Sources */,
 				FA3A885C292646CE000BDB3D /* AppDataManager+Recent.swift in Sources */,
+				B9D4F6F72941F8CE0039BC77 /* Signature.swift in Sources */,
 				FACEC9B52904F82D0014ABC9 /* ExKeyChain.swift in Sources */,
 				B94AA08C2939EB7200E734B3 /* HomeListProfileViewModel.swift in Sources */,
 				B9B3705928FE4FE80022498B /* CountryResult.swift in Sources */,
@@ -1858,6 +1884,7 @@
 				9E3756CE28E6E54500E95C64 /* SpashWindowAccessor.swift in Sources */,
 				9EC3322F28C1151800CA5DF5 /* LoginInputTextFiled.swift in Sources */,
 				FAD511DF292C010E00194004 /* NetworkChecker.swift in Sources */,
+				B9D4F6F62941F8CE0039BC77 /* PublicKey.swift in Sources */,
 				B9D7F71C28D781A8008B1D39 /* AppDataManager.swift in Sources */,
 				B99DB43528E5955F00331AFB /* MenuQuickAccessView.swift in Sources */,
 				9E3756C328E6DB6500E95C64 /* PinZoomView.swift in Sources */,
@@ -1885,6 +1912,7 @@
 				B9B3705128FE4FE70022498B /* AppSettingResult.swift in Sources */,
 				9EC3323328C2134200CA5DF5 /* LoginButtonStyle.swift in Sources */,
 				B972163528FFF1DD002E9ABE /* NotificationExtension.swift in Sources */,
+				B9D4F6F92941F8CE0039BC77 /* Base64.swift in Sources */,
 				B9B3705F28FE500B0022498B /* CountryModel.swift in Sources */,
 				9E3756B628E6DB3900E95C64 /* WindowMgr.swift in Sources */,
 				B9B3705D28FE4FE80022498B /* CountryStaticServers.swift in Sources */,
@@ -2852,6 +2880,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		B9D4F6EE2941F81C0039BC77 /* XCRemoteSwiftPackageReference "ASN1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/leif-ibsen/ASN1";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		FADFCE7529006C7600219BB0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -2912,6 +2948,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B99DB42728E449A700331AFB /* XCRemoteSwiftPackageReference "PopupView" */;
 			productName = PopupView;
+		};
+		B9D4F6EF2941F81C0039BC77 /* ASN1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9D4F6EE2941F81C0039BC77 /* XCRemoteSwiftPackageReference "ASN1" */;
+			productName = ASN1;
 		};
 		FA00FA132934C14C00BC1AF7 /* TunnelKitWireGuardAppExtension */ = {
 			isa = XCSwiftPackageProductDependency;
