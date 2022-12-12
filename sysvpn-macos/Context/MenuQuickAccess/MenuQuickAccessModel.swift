@@ -47,7 +47,6 @@ extension MenuQuickAccessView {
         }
         
         func onNeedRefreshUI() {
-            
             if GlobalAppStates.shared.displayState != .connected {
                 userIp = "\(L10n.Global.ipLabel) \(AppDataManager.shared.userIp) -"
                 location = AppDataManager.shared.isConnect ? L10n.Login.titleNotConnect : "\(L10n.Global.locationLabel) \(AppDataManager.shared.userCity)"

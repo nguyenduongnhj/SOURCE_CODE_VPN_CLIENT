@@ -5,7 +5,7 @@
 	<key>NetworkExtension</key>
 	<dict>
 		<key>NEMachServiceName</key>
-		<string>$(TeamIdentifierPrefix)group.com.syspvn.macos.openvpn</string>
+		<string>$(TeamIdentifierPrefix)group.com.sysvpn.macos.openvpn</string>
 		<key>NEProviderClasses</key>
 		<dict>
 			<key>com.apple.networkextension.packet-tunnel</key>

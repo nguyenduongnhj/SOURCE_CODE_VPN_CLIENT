@@ -125,5 +125,4 @@ struct SearchPopoverView: View {
         }
         .background(Asset.Colors.popoverBgColor.swiftUIColor)
     }
-     
 }

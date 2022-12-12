@@ -21,7 +21,6 @@ protocol INodeInfo {
     var level1Id: String { get }
     var imageUrl: String? { get }
     var deepId: String { get }
-    
 }
 
 extension INodeInfo {

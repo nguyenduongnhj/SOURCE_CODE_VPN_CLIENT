@@ -4,11 +4,11 @@
 //
 //  Created by macbook on 17/10/2022.
 //
+import Foundation
 import NetworkExtension
 import os.log
 import TunnelKitManager
 import TunnelKitOpenVPNAppExtension
-import Foundation
 
 enum VPNProtocol {
     case openVPN
@@ -16,33 +16,31 @@ enum VPNProtocol {
 }
 
 class PacketTunnelProvider: NEPacketTunnelProvider {
- 
     var lastConnectProtoAdapter: ProtoAdapter?
     
     private lazy var openVPNAdapter = OpenVPNTunnelAdapter(packetTunnelProvider: self)
     private lazy var wireguardAdapter = WireGuardTunnelAdapter(packetTunnelProvider: self)
      
     override func startTunnel(options: [String: NSObject]? = nil, completionHandler: @escaping (Error?) -> Void) {
-        
-        
         var tunnelProtocol: VPNProtocol = .wireGuard
         
-        if let tunnel = self.protocolConfiguration as? NETunnelProviderProtocol {
+        if let tunnel = protocolConfiguration as? NETunnelProviderProtocol {
             let protocolConfiguration = tunnel.providerConfiguration?[CoreAppConstants.VPNProtocolName.configurationField] as? String
             if protocolConfiguration == CoreAppConstants.VPNProtocolName.openVpn {
                 tunnelProtocol = .openVPN
             }
         }
          
-        
         os_log("%{public}s", log: OSLog(subsystem: "SysVPNIPC-OP", category: "IPC"), type: .default, "loadata \(tunnelProtocol)")
         
         lastConnectProtoAdapter = getTunnelByProtocol(proto: tunnelProtocol)
         lastConnectProtoAdapter?.startTunnel(options: options, completionHandler: completionHandler)
+      
     }
     
     override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         lastConnectProtoAdapter?.stopTunnel(with: reason, completionHandler: completionHandler)
+     
     }
     
     override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)? = nil) {
@@ -57,9 +55,9 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             return wireguardAdapter
         }
     }
-    
+ 
     public var interfaceName: String? {
-        guard let tunnelFileDescriptor = self.tunnelFileDescriptor else { return nil }
+        guard let tunnelFileDescriptor = tunnelFileDescriptor else { return nil }
 
         var buffer = [UInt8](repeating: 0, count: Int(IFNAMSIZ))
 
@@ -69,8 +67,8 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             var ifnameSize = socklen_t(IFNAMSIZ)
             let result = getsockopt(
                 tunnelFileDescriptor,
-                2  ,
-                2 ,
+                2,
+                2,
                 baseAddress,
                 &ifnameSize)
 
@@ -113,5 +111,4 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         }
         return nil
     }
-     
 }

@@ -5,29 +5,28 @@
 //  Created by doragon on 02/12/2022.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 extension HomeListProfileView {
     @MainActor class HomeListProfileViewModel: ObservableObject {
         @Published var textInput: String = ""
-        @Published var indexSelect: UUID = UUID()
+        @Published var indexSelect: UUID = .init()
         @Published var listProfile: [HomeListProfileModel]
         var changeSink: AnyCancellable?
         
-        init () {
+        init() {
             listProfile = []
             getProfileUser()
             listen()
         }
         
-        
-        func listen(){
+        func listen() {
             changeSink = GlobalAppStates.shared.$listProfile.sink { listProfile in
-                self.listProfile = [] 
+                self.listProfile = []
                 var listTemp = [HomeListProfileModel]()
-                if listProfile.count > 0 {
-                    listTemp.append(HomeListProfileModel(type: .header, title:  L10n.Global.allProfile))
+                if !listProfile.isEmpty {
+                    listTemp.append(HomeListProfileModel(type: .header, title: L10n.Global.allProfile))
                     for item in listProfile {
                         let item = HomeListProfileModel(type: .body, title: item.profileName ?? "", profileDetail: item)
                         listTemp.append(item)
@@ -45,8 +44,8 @@ extension HomeListProfileView {
             let profile = GlobalAppStates.shared.listProfile
             
             var listTemp = [HomeListProfileModel]()
-            if profile.count > 0 {
-                listTemp.append(HomeListProfileModel(type: .header, title:  L10n.Global.allProfile))
+            if !profile.isEmpty {
+                listTemp.append(HomeListProfileModel(type: .header, title: L10n.Global.allProfile))
                 for item in profile {
                     let item = HomeListProfileModel(type: .body, title: item.profileName ?? "", profileDetail: item)
                     listTemp.append(item)
@@ -56,7 +55,6 @@ extension HomeListProfileView {
         }
         
         func deleteProfile(_ id: UUID) {
-            
             var profileResult = UserProfileResult()
             profileResult.listProfile = []
             
@@ -92,16 +90,12 @@ extension HomeListProfileView {
                     profileResult.listProfile?.append(profile)
                 }
             }
-            GlobalAppStates.shared.listProfile = profileResult.listProfile ?? [] 
+            GlobalAppStates.shared.listProfile = profileResult.listProfile ?? []
             AppDataManager.shared.saveProfile()
         }
         
-        func rename(_ id: UUID) {
-            
-        }
+        func rename(_: UUID) {}
         
-        func setLocation() {
-            
-        }
+        func setLocation() {}
     }
 }

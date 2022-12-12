@@ -37,7 +37,6 @@ extension OpenVpnProtocolFactory: VpnProtocolFactory {
          let neProtocol = try generator.generatedTunnelProtocol(withBundleIdentifier: bundleId, appGroup: appGroup, context: bundleId, username: configuration.username) */
         let vpnProto = try openVpnConfig.asTunnelProtocol(withBundleIdentifier: bundleId, extra: configuration.extra)
      
-        
         vpnProto.providerConfiguration?[CoreAppConstants.VPNProtocolName.configurationField] = CoreAppConstants.VPNProtocolName.openVpn
         return vpnProto
     }

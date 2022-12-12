@@ -9,6 +9,7 @@ import __TunnelKitUtils
 import CoreWLAN
 import CTunnelKitCore
 import NetworkExtension
+import os.log
 import SwiftyBeaver
 import TunnelKitAppExtension
 import TunnelKitCore
@@ -17,10 +18,9 @@ import TunnelKitOpenVPNAppExtension
 import TunnelKitOpenVPNCore
 import TunnelKitOpenVPNManager
 import TunnelKitOpenVPNProtocol
-
 private let log = SwiftyBeaver.self
  
-open class OpenVPNTunnelAdapter : ProtoAdapter {
+open class OpenVPNTunnelAdapter: ProtoAdapter {
     private weak var packetTunnelProvider: NEPacketTunnelProvider?
 
     // MARK: Tweaks
@@ -101,7 +101,7 @@ open class OpenVPNTunnelAdapter : ProtoAdapter {
         self.packetTunnelProvider = packetTunnelProvider
     }
  
-    open override func startTunnel(options: [String: NSObject]? = nil, completionHandler: @escaping (Error?) -> Void) {
+    override open func startTunnel(options: [String: NSObject]? = nil, completionHandler: @escaping (Error?) -> Void) {
         // required configuration
         do {
             guard let tunnelProtocol = packetTunnelProvider?.protocolConfiguration as? NETunnelProviderProtocol else {
@@ -192,7 +192,7 @@ open class OpenVPNTunnelAdapter : ProtoAdapter {
         }
     }
     
-    open override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
+    override open func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         pendingStartHandler = nil
         log.info("Stopping tunnel...")
         cfg._appexSetLastError(nil)
@@ -338,6 +338,7 @@ extension OpenVPNTunnelAdapter: GenericSocketDelegate {
     
     public func socketDidTimeout(_ socket: GenericSocket) {
         log.debug("Socket timed out waiting for activity, cancelling...")
+       
         shouldReconnect = true
         socket.shutdown()
 
@@ -410,7 +411,7 @@ extension OpenVPNTunnelAdapter: GenericSocketDelegate {
             }
             return
         }
-
+        
         // shut down
         disposeTunnel(error: shutdownError)
     }
@@ -499,7 +500,7 @@ extension OpenVPNTunnelAdapter: OpenVPNSessionDelegate {
         } else {
             log.info("Session did stop")
         }
-
+        
         isCountingData = false
         refreshDataCount()
 

@@ -48,13 +48,11 @@ extension HomeView {
             getListMultiHop()
             getProfileUser()
             
-            
             _ = GlobalAppStates.shared.initApp {
                 print("init app success")
             }
             
             setupCancelZoom()
-            
         }
         
         func setupCancelZoom() {
@@ -81,7 +79,6 @@ extension HomeView {
             updateAvailableContry()
         }
          
-        
         func getProfileUser() {
             if GlobalAppStates.shared.listProfile.isEmpty {
                 AppDataManager.shared.readListProfile()
@@ -89,17 +86,16 @@ extension HomeView {
             let profile = GlobalAppStates.shared.listProfile
             
             var listTemp = [HomeListProfileModel]()
-            if profile.count > 0 {
-                listTemp.append(HomeListProfileModel(type: .header, title:  L10n.Global.allProfile))
+            if !profile.isEmpty {
+                listTemp.append(HomeListProfileModel(type: .header, title: L10n.Global.allProfile))
                 for item in profile {
                     let item = HomeListProfileModel(type: .body, title: item.profileName ?? "", profileDetail: item)
                     listTemp.append(item)
                 }
-            } 
+            }
             listProfileUser = listTemp
         }
         
-             
         func onChangeCountry(item: HomeListCountryModel?) {
             listCity = []
             let availableCountry = AppDataManager.shared.userCountry?.availableCountries ?? []
@@ -153,7 +149,7 @@ extension HomeView {
             }
             
             if !recommendCountry.isEmpty {
-                listCountryTemp.append(HomeListCountryModel(type: .header, title:  L10n.Global.recommendedLabel))
+                listCountryTemp.append(HomeListCountryModel(type: .header, title: L10n.Global.recommendedLabel))
                 for item in recommendCountry {
                     let countryItemModel = HomeListCountryModel(type: .country, title: item.name ?? "", totalCity: item.city?.count ?? 0, imageUrl: item.flag, idCountry: item.id ?? 0, origin: item)
                     listCountryTemp.append(countryItemModel)
@@ -161,7 +157,7 @@ extension HomeView {
                 listCountryTemp.append(HomeListCountryModel(type: .spacing))
             }
             if !availableCountry.isEmpty {
-                listCountryTemp.append(HomeListCountryModel(type: .header, title:  L10n.Global.allCountriesLabel))
+                listCountryTemp.append(HomeListCountryModel(type: .header, title: L10n.Global.allCountriesLabel))
                 for item in availableCountry {
                     let countryItemModel = HomeListCountryModel(type: .country, title: item.name ?? "", totalCity: item.city?.count ?? 0, imageUrl: item.flag, idCountry: item.id ?? 0, origin: item)
                     listCountryTemp.append(countryItemModel)
@@ -176,7 +172,7 @@ extension HomeView {
             listStaticServer.removeAll()
             let staticServer = AppDataManager.shared.userCountry?.staticServers ?? []
             if !staticServer.isEmpty {
-                listStaticServer.append(HomeListCountryModel(type: .header, title:  L10n.Global.staticIpLabel))
+                listStaticServer.append(HomeListCountryModel(type: .header, title: L10n.Global.staticIpLabel))
                 for item in staticServer {
                     let score = item.score ?? 1
                     let staticItem = HomeListCountryModel(type: .country, title: item.countryName ?? "", imageUrl: item.flag, cityName: item.cityName ?? "", serverNumber: item.serverNumber ?? 1, serverStar: score + 1, origin: item)
@@ -189,7 +185,7 @@ extension HomeView {
         func getListMultiHop() {
             let multiHopServer = AppDataManager.shared.mutilHopServer ?? []
             if !multiHopServer.isEmpty {
-                listMultiHop.append(HomeListCountryModel(type: .header, title:  L10n.Global.multihopLabel))
+                listMultiHop.append(HomeListCountryModel(type: .header, title: L10n.Global.multihopLabel))
                 for item in multiHopServer {
                     let multiHopItem = HomeListCountryModel(type: .country, title: item.entry?.country?.name ?? "", imageUrl: item.entry?.country?.flag, title2: item.exit?.country?.name ?? "", imageUrl2: item.exit?.country?.flag, origin: item)
                     listMultiHop.append(multiHopItem)

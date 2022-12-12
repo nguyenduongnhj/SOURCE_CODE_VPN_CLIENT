@@ -4,21 +4,14 @@
 //
 //  Created by macbook on 28/11/2022.
 //
-import NetworkExtension
 import Foundation
+import NetworkExtension
+import SwiftyBeaver
 
-
- open class ProtoAdapter {
+open class ProtoAdapter {
+    open func startTunnel(options: [String: NSObject]? = nil, completionHandler: @escaping (Error?) -> Void) {}
     
-    open func startTunnel(options: [String: NSObject]? = nil, completionHandler: @escaping (Error?) -> Void)  {
-        
-    }
+    open func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {}
     
-    open func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
-    }
-    
-    open func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)? = nil) {
-        
-    }
-    
+    open func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)? = nil) {}
 }

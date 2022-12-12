@@ -30,7 +30,7 @@ struct TabbarItemView: View {
                     .font(Font.system(size: 14, weight: .semibold))
                 Spacer().frame(height: 4)
                 if model.isConnecting {
-                    Text("Connecting")
+                    Text("Connected")
                         .foregroundColor(Asset.Colors.subTextColor.swiftUIColor)
                         .font(Font.system(size: 13, weight: .regular))
                 } else if model.isShowDate {

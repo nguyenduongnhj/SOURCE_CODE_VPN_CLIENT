@@ -6,7 +6,8 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>$(TeamIdentifierPrefix)group.com.syspvn.macos</string>
+		<string>$(TeamIdentifierPrefix)group.com.sysvpn.macos</string>
+		<string>group.com.sysvpn.macos</string>
 	</array>
 </dict>
 </plist>

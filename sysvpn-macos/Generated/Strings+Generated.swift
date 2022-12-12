@@ -95,6 +95,8 @@ public enum L10n {
     public static let downVolumeLabel = L10n.tr("Global", "downVolumeLabel", fallback: "Down Volume:")
     /// Email account
     public static let emailAccount = L10n.tr("Global", "emailAccount", fallback: "Email account")
+    /// Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    public static let emptyProfileDesc = L10n.tr("Global", "emptyProfileDesc", fallback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor")
     /// Follow system
     public static let followSystem = L10n.tr("Global", "followSystem", fallback: "Follow system")
     /// Font Size

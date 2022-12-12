@@ -24,6 +24,8 @@ enum OpenWindows: String, CaseIterable {
 class WindowMgr: ObservableObject {
     private static var _instance: WindowMgr = .init()
     
+    weak var nsWindow: NSWindow?
+    
     static var shared: WindowMgr {
         return _instance
     }

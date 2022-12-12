@@ -10,6 +10,6 @@
 
     #define DOMAIN_NAME "NetworkExtension"
     #define AGENT_TYPE  "VPN"
-    #define AGENT_NAME "sysvpn-macos"
+    #define AGENT_NAME "SysVPNClient"
 
 #endif /* const_define_h */

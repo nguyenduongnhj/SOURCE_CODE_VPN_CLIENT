@@ -10,7 +10,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>J953BZ6B49.group.com.syspvn.macos</string>
+		<string>J953BZ6B49.group.com.sysvpn.macos</string>
 	</array>
 	<key>com.apple.security.network.client</key>
 	<true/>

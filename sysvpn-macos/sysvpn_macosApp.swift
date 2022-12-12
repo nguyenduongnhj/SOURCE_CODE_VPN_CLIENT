@@ -41,6 +41,7 @@ struct sysvpn_macosApp: App {
                         }
                         isFirstLaunch = true
                     }
+                    WindowMgr.shared.nsWindow = window
                 }
             }
             .onOpenURL { url in

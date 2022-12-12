@@ -16,7 +16,7 @@ import TunnelKitWireGuardCore
 import TunnelKitWireGuardManager
 import WireGuardKit
 
-open class WireGuardTunnelAdapter  : ProtoAdapter  {
+open class WireGuardTunnelAdapter: ProtoAdapter {
     private var cfg: WireGuard.ProviderConfiguration!
     private weak var packetTunnelProvider: NEPacketTunnelProvider!
 
@@ -28,7 +28,7 @@ open class WireGuardTunnelAdapter  : ProtoAdapter  {
         self.packetTunnelProvider = packetTunnelProvider
     }
 
-    open override func startTunnel(options: [String: NSObject]?, completionHandler: @escaping (Error?) -> Void) {
+    override open func startTunnel(options: [String: NSObject]?, completionHandler: @escaping (Error?) -> Void) {
         // BEGIN: TunnelKit
         
         guard let tunnelProviderProtocol = packetTunnelProvider.protocolConfiguration as? NETunnelProviderProtocol else {
@@ -92,7 +92,7 @@ open class WireGuardTunnelAdapter  : ProtoAdapter  {
         }
     }
 
-    open override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
+    override open func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         wg_log(.info, staticMessage: "Stopping tunnel")
 
         adapter.stop { error in
@@ -114,7 +114,7 @@ open class WireGuardTunnelAdapter  : ProtoAdapter  {
         }
     }
 
-    open override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)? = nil) {
+    override open func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)? = nil) {
         guard let completionHandler = completionHandler else { return }
 
         if messageData.count == 1 && messageData[0] == 0 {

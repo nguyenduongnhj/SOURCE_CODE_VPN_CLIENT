@@ -140,7 +140,7 @@ struct LoginView: View {
                 .frame(width: 460)
         }
         .ignoresSafeArea()
-        .frame(minWidth: 1000, minHeight: 650)
+        .frame(minWidth: 1200, minHeight: 700)
     }
     
     var bodyLogin: some View {
@@ -203,6 +203,6 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .frame(minWidth: 1000, minHeight: 650)
+            .frame(minWidth: 1200, minHeight: 700)
     }
 }

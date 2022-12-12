@@ -127,8 +127,7 @@ struct VpnMapPointLayerView: View {
                         }
                 }
             }
-        } 
-        
+        }
     }
     
     func computNodePointPos(node: NodePoint) -> CGPoint {
@@ -142,7 +141,7 @@ struct VpnMapPointLayerView: View {
     }
 }
  
-struct SingalLineAnimatedModifier:   AnimatableModifier {
+struct SingalLineAnimatedModifier: AnimatableModifier {
     var point2: CGPoint = .zero
     var point1: CGPoint = .zero
     var maxPoint: CGPoint = .zero

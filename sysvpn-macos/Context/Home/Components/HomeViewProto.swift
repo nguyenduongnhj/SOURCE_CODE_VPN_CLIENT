@@ -115,7 +115,19 @@ extension HomeView {
                         withAnimation {
                             viewModel.isOpenCreateProfile = true
                         }
-                    })
+                    }, onClose: {
+                        withAnimation {
+                            viewModel.selectedMenuItem = .none
+                        }
+                    }) { item in
+                        guard let id = item.serverId else {
+                            return
+                        }
+                        self.viewModel.connect(to: AppDataManager.shared.getNodeByCountryId(countryId: id))
+                        withAnimation {
+                            viewModel.selectedMenuItem = .none
+                        }
+                    }
                 }
             }
         }
@@ -186,17 +198,17 @@ extension HomeView {
                             }
                         }
                     SettingView(onClose: {
-                        withAnimation {
-                            viewModel.isOpenSetting = false
-                        }
-                    },
-                    onTapLogout: {
-                        withAnimation {
-                            viewModel.selectedMenuItem = .none
-                            viewModel.isOpenSetting = false
-                            viewModel.isShowPopupLogout = true
-                        }
-                    })
+                                    withAnimation {
+                                        viewModel.isOpenSetting = false
+                                    }
+                                },
+                                onTapLogout: {
+                                    withAnimation {
+                                        viewModel.selectedMenuItem = .none
+                                        viewModel.isOpenSetting = false
+                                        viewModel.isShowPopupLogout = true
+                                    }
+                                })
                 }.zIndex(4)
             } else if viewModel.isShowPopupLogout {
                 ZStack {
@@ -266,7 +278,6 @@ extension HomeView {
                         }
                     })
                 }.zIndex(4)
-               
             }
         }
     }

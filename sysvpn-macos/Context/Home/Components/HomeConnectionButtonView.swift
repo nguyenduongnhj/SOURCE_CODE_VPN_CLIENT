@@ -122,7 +122,7 @@ struct HomeConnectionButtonView: View {
             Text((displayAppState == .connected) ? L10n.Global.vpnConnected : L10n.Global.vpnNotConnected)
                 .font(.system(size: 14, weight: .regular))
                 .foregroundColor(Color.white)
-            Spacer().frame(height: 20)
+            Spacer().frame(minHeight: 20)
             
             if displayAppState == .connected {
                 connectedButtonView
@@ -131,7 +131,7 @@ struct HomeConnectionButtonView: View {
                     onTap?()
                 }
             }
-            Spacer().frame(maxHeight: 46)
+            Spacer().frame(minHeight: 20)
                 
         }.onChange(of: appState.displayState) { newValue in
            

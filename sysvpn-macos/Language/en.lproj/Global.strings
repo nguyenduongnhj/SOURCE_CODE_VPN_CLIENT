@@ -42,8 +42,8 @@
 "pickToTop" = "Pick to top";
 "rename" = "Rename";
 "deleteProfile" = "Delete profile";
-
 "renameProfile" = "Rename profile";
+"emptyProfileDesc" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor";
 
 //setting
 "general" = "General";

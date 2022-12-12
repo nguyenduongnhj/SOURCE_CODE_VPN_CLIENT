@@ -8,7 +8,11 @@
 import Combine
 import Foundation
 import SwiftUI
- 
+class ZoomStoreValue {
+    var lastValue: Double = 0
+    var intCountSampleValue = 0
+}
+
 struct ZoomModifier: ViewModifier {
     private var contentSize: CGSize
     @Binding var screenSize: CGSize
@@ -24,6 +28,7 @@ struct ZoomModifier: ViewModifier {
     @State private var lastOffset = CGSize.zero
     @Binding var cameraPosition: CGPoint?
     @State var subs = Set<AnyCancellable>()
+    var storeValue = ZoomStoreValue()
     
     var overlayLayer: VpnMapOverlayLayer
     
@@ -149,9 +154,42 @@ struct ZoomModifier: ViewModifier {
         if detail == 0 {
             return
         }
-        
+         
         let value = currentScale + detail / 100
         currentScale = Swift.min(Swift.max(value, self.min), self.max)
+    }
+    
+    func checkEventScroll(event: NSEvent?) {
+        if disableZoom {
+            return
+        }
+        
+        guard let event = event else {
+            return
+        }
+        
+        if WindowMgr.shared.nsWindow != event.window {
+            return
+        }
+        
+        if event.phase.rawValue == 0 {
+            if storeValue.lastValue == event.timestamp {
+                storeValue.intCountSampleValue += 1
+            } else {
+                storeValue.intCountSampleValue = 0
+            }
+           
+            storeValue.lastValue = event.timestamp
+           
+            if storeValue.intCountSampleValue > 10 {
+                return
+            }
+           
+        } else {
+            storeValue.intCountSampleValue = 0
+        }
+    
+        updateDetail(detail: Double(event.scrollingDeltaY))
     }
     
     func trackScrollWheel() {
@@ -159,12 +197,10 @@ struct ZoomModifier: ViewModifier {
             .filter { event in event?.type == .scrollWheel }
             .throttle(for: .milliseconds(20),
                       scheduler: DispatchQueue.main,
-                      latest: false)
+                      latest: true)
             .sink { event in
-                if self.disableZoom {
-                    return
-                }
-                self.updateDetail(detail: Double(event?.scrollingDeltaY ?? 0))
+                
+                self.checkEventScroll(event: event)
             }
             .store(in: &subs)
     }

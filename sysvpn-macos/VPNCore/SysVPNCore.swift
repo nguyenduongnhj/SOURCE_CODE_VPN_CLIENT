@@ -206,6 +206,7 @@ class SysVPNCore: SysVPNGatewayProtocol {
         let dj = DependencyContainer.shared
         if let city = info as? CountryCity {
             dj.vpnCore.connect(with: .init(connectType: .cityId(id: city.id ?? 0), nodeInfo: info))
+            return true
         } else if let country = info as? CountryAvailables {
             dj.vpnCore.connect(with: .init(connectType: .countryId(id: country.id ?? 0), nodeInfo: info))
             return true

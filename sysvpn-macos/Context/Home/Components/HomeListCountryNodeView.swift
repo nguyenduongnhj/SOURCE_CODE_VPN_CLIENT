@@ -141,7 +141,7 @@ struct HomeListCountryNodeView: View {
         .onTapGesture {
             onTouchQuestion?()
         }
-    } 
+    }
 }
 
 struct HomeDetailCityNodeView: View {

@@ -95,7 +95,7 @@ struct HomeView: View {
             
             popupDialog
             
-        }.frame(minWidth: 1000, minHeight: 650)
+        }.frame(minWidth: 1200, minHeight: 700)
             .onAppear {
                 localIsConnected = appState.displayState == .connected
                 viewModel.onViewAppear()
@@ -125,5 +125,3 @@ struct HomeView: View {
             }
     }
 }
-
- 

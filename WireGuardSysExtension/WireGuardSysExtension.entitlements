@@ -18,7 +18,7 @@
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)group.com.syspvn.macos</string>
+		<string>$(AppIdentifierPrefix)group.com.sysvpn.macos</string>
 	</array>
 </dict>
 </plist>

@@ -19,7 +19,7 @@ class SettingUtils {
     
     func setAutoLaunch(enable: Bool) {
         // auto start
-        let launcherAppId = "com.syspvn.client.macos-starter"
+        let launcherAppId = "com.sysvpn.client.macos-starter"
         //  let runningApps = NSWorkspace.shared.runningApplications
         //  let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
         SMLoginItemSetEnabled(launcherAppId as CFString, enable)
