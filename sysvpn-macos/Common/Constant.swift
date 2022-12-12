@@ -15,7 +15,12 @@ struct Constant {
             static let root = "https://prod.sysvpnconnect.com"
         #endif
         
+        static let baseUrl = "http://localhost:3000"
+        
         struct Path {
+            static let listCountry2 = "/v1/country/get_list"
+            
+            
             static let ipInfo = "/app/module_server/v1/app_setting/get_app_settings"
             static let listCountry = "/app/module_server/v1/country/get_list"
             static let requestCert = "/app/module_server/v1/vpn/request_certificate"

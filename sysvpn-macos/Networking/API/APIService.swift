@@ -27,8 +27,11 @@ extension APIService: TargetType {
     // This is the base URL we'll be using, typically our server.
     var baseURL: URL {
         switch self {
-        case .getAppSettings, .login, .getListCountry, .logout, .requestCert, .disconnectSession, .getStartServer, .getListMutilHop, .refreshToken, .changePassword, .loginSocial:
+        case .getAppSettings, .login, .logout, .requestCert, .disconnectSession, .getStartServer, .getListMutilHop, .refreshToken, .changePassword, .loginSocial:
             return URL(string: Constant.API.root)!
+            
+        case .getListCountry:
+            return URL(string: Constant.API.baseUrl)!
         }
     }
 
@@ -42,7 +45,7 @@ extension APIService: TargetType {
         case .login:
             return Constant.API.Path.login
         case .getListCountry:
-            return Constant.API.Path.listCountry
+            return Constant.API.Path.listCountry2
         case .logout:
             return Constant.API.Path.logout
         case .requestCert:
