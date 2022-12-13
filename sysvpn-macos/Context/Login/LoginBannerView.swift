@@ -15,23 +15,13 @@ struct LoginBannerView: View {
             
             Asset.Assets.logo.swiftUIImage
                 .resizable()
-                .frame(width: 167, height: 50)
-                .position(x: 134, y: 72)
+                .frame(width: 80, height: 80)
+                .position(x: 80, y: 72)
             
             VStack {
                 Asset.Assets.introImage.swiftUIImage
-                Text("Exclusive Offer")
+                Text("Welcome to Doragon VPN")
                     .font(.system(size: 24, weight: .semibold))
-                Spacer().frame(height: 14)
-                Text("Get your Free 30 days access")
-                    .font(.system(size: 20))
-                Spacer().frame(height: 30)
-                Button {} label: {
-                    Text("Get offer now")
-                        .font(.system(size: 16, weight: .medium))
-                }.buttonStyle(LoginButtonCTAStyle(bgColor: Color.white))
-                    .environment(\.isEnabled, true)
-                    .frame(width: 130)
             }
         }
     }

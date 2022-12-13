@@ -60,11 +60,11 @@
 //setting detail
 ///General
 "autoLaunch" = "Auto-launch";
-"autoLaunchDesc" = "Start SysVPN automatically when system starts.";
+"autoLaunchDesc" = "Start Doragon VPN automatically when system starts.";
 "startMinimized" = "Start minimized";
-"startMinimizedDesc" = "SysVPN starts in the background and remains out of your way.";
+"startMinimizedDesc" = "Doragon VPN starts in the background and remains out of your way.";
 "systemNoti" = "System notifications";
-"systemNotiDesc" = "I want to get notifications when connecting/disconnecting from SysVPN.";
+"systemNotiDesc" = "I want to get notifications when connecting/disconnecting from Doragon VPN.";
 "appLanguage" = "App language";
 "titleLogout" = "Sign Out";
 

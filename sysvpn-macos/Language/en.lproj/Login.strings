@@ -5,7 +5,7 @@
   Created by Nguyen Dinh Thach on 31/08/2022.
   
 */
-"sologan" = "Start protecting yourself with SysVPN";
+"sologan" = "Start protecting yourself with Doragon VPN";
 "sologanProcessing" = "Light is Faster, but We are Safer.";
 "yourEmail" = "Your email";
 "password" = "Password";
@@ -16,7 +16,7 @@
 "signInWithApple" = "Sign In with Apple ID";
 "dontHaveAnAccount" = "Don’t have an account?";
 "createNew" = "Create New";
-"appName" = "SYSVPN";
+"appName" = "Doragon VPN";
 "tryAgain" = "Please try again!";
 "quickConnect" = "Quick Connect";
 "titleQuit" = "Quit";

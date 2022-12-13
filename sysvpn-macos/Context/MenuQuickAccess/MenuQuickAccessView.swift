@@ -271,7 +271,8 @@ struct MenuQuickAccessView: View {
                 } label: {
                     HStack {
                         Asset.Assets.icLogoApp.swiftUIImage
-                            .frame(width: sizeIcon, height: sizeIcon)
+                            .resizable()
+                            .frame(width: 40, height: 40)
                         Text("\(L10n.Login.titleOpen) \(L10n.Login.appName)")
                             .font(Font.system(size: 14, weight: .semibold))
                             .foregroundColor(Asset.Colors.primaryColor.swiftUIColor)

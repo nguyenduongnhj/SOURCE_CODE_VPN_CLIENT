@@ -33,8 +33,8 @@ public enum L10n {
     public static let autoConnectDesc = L10n.tr("Global", "autoConnectDesc", fallback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit")
     /// Auto-launch
     public static let autoLaunch = L10n.tr("Global", "autoLaunch", fallback: "Auto-launch")
-    /// Start SysVPN automatically when system starts.
-    public static let autoLaunchDesc = L10n.tr("Global", "autoLaunchDesc", fallback: "Start SysVPN automatically when system starts.")
+    /// Start Doragon VPN automatically when system starts.
+    public static let autoLaunchDesc = L10n.tr("Global", "autoLaunchDesc", fallback: "Start Doragon VPN automatically when system starts.")
     /// Cancel
     public static let cancel = L10n.tr("Global", "cancel", fallback: "Cancel")
     /// Change password
@@ -201,8 +201,8 @@ public enum L10n {
     public static let signOutDesc = L10n.tr("Global", "signOutDesc", fallback: "You will be returned to the login screen")
     /// Start minimized
     public static let startMinimized = L10n.tr("Global", "startMinimized", fallback: "Start minimized")
-    /// SysVPN starts in the background and remains out of your way.
-    public static let startMinimizedDesc = L10n.tr("Global", "startMinimizedDesc", fallback: "SysVPN starts in the background and remains out of your way.")
+    /// Doragon VPN starts in the background and remains out of your way.
+    public static let startMinimizedDesc = L10n.tr("Global", "startMinimizedDesc", fallback: "Doragon VPN starts in the background and remains out of your way.")
     /// Static IP
     public static let staticIP = L10n.tr("Global", "staticIP", fallback: "Static IP")
     /// Personal Static IP address
@@ -217,8 +217,8 @@ public enum L10n {
     public static let supportCenter = L10n.tr("Global", "supportCenter", fallback: "Support Center")
     /// System notifications
     public static let systemNoti = L10n.tr("Global", "systemNoti", fallback: "System notifications")
-    /// I want to get notifications when connecting/disconnecting from SysVPN.
-    public static let systemNotiDesc = L10n.tr("Global", "systemNotiDesc", fallback: "I want to get notifications when connecting/disconnecting from SysVPN.")
+    /// I want to get notifications when connecting/disconnecting from Doragon VPN.
+    public static let systemNotiDesc = L10n.tr("Global", "systemNotiDesc", fallback: "I want to get notifications when connecting/disconnecting from Doragon VPN.")
     /// Sysvpn Configuration
     public static let sysvpnConfiguration = L10n.tr("Global", "sysvpnConfiguration", fallback: "Sysvpn Configuration")
     /// Theme mode
@@ -255,8 +255,8 @@ public enum L10n {
   public enum Login {
     /// All Country
     public static let allCountry = L10n.tr("Login", "allCountry", fallback: "All Country")
-    /// SYSVPN
-    public static let appName = L10n.tr("Login", "appName", fallback: "SYSVPN")
+    /// Doragon VPN
+    public static let appName = L10n.tr("Login", "appName", fallback: "Doragon VPN")
     /// Create New
     public static let createNew = L10n.tr("Login", "createNew", fallback: "Create New")
     /// Disconnect
@@ -285,7 +285,7 @@ public enum L10n {
     ///   sysvpn-macos
     /// 
     ///   Created by Nguyen Dinh Thach on 31/08/2022.
-    public static let sologan = L10n.tr("Login", "sologan", fallback: "Start protecting yourself with SysVPN")
+    public static let sologan = L10n.tr("Login", "sologan", fallback: "Start protecting yourself with Doragon VPN")
     /// Light is Faster, but We are Safer.
     public static let sologanProcessing = L10n.tr("Login", "sologanProcessing", fallback: "Light is Faster, but We are Safer.")
     /// Suggest

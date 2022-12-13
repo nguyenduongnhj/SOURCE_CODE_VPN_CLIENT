@@ -14,7 +14,7 @@ class XPCServiceUser {
     public var isConnected: Bool = false {
         didSet {
             if isConnected {
-                isAvailable = true
+                isAvailable = false
             }
         }
     }

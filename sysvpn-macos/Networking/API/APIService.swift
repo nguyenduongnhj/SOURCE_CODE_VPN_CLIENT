@@ -107,6 +107,7 @@ extension APIService: TargetType {
             param["cybersec"] = vpnParam.cybersec
             param["isHop"] = vpnParam.isHop
             param["tech"] = vpnParam.tech?.vpnTypeStr ?? "ovpn"
+            param["deviceInfo"]  = nil 
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case let .disconnectSession(sectionId, disconnectedBy):
             param["sessionId"] = sectionId

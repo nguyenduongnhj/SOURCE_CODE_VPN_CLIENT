@@ -19,8 +19,8 @@ public class CoreAppConstants {
         static let quickReconnectTime: TimeInterval = 0.5
         static let announcementRefreshTime: TimeInterval = 12 * 60 * 60
     }
-    
-    static var appBundleId: String = (Bundle.main.bundleIdentifier ?? "om.sysvpn.client.macos").asMainAppBundleIdentifier
+  //  com.sysvpn.client.macos.AppVpnAppExtension
+    static var appBundleId: String = (Bundle.main.bundleIdentifier ?? "com.sysvpn.client.macos").asMainAppBundleIdentifier
     
     struct AppGroups {
         static let main = "JM6FBPTUR3.group.com.sysvpn.macos"

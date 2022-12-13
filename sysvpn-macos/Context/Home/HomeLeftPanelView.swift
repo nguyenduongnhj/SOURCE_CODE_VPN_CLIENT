@@ -61,16 +61,6 @@ struct HomeLeftPanelView: View {
                         selectedItem = .staticIp
                     }
                 }
-                HomeMenuButtonView(
-                    active: selectedItem == .multiHop,
-                    icon: Asset.Assets.icLink.swiftUIImage,
-                    title: L10n.Global.multiHop,
-                    content: "\(viewModel.totalMultipleHop) \(L10n.Global.multiHopDesc)"
-                ).onTapGesture {
-                    withAnimation {
-                        selectedItem = .multiHop
-                    }
-                }
             } else {
                 HomeProfileMenuView(onTapCreate: {
                     onTapCreateProfile?()
@@ -119,7 +109,7 @@ struct HomeLeftPanelView: View {
     
     var footerSection: some View {
         HStack {
-            Asset.Assets.avatarDefault.swiftUIImage
+            Asset.Assets.avatarTest.swiftUIImage
                 .resizable()
                 .frame(width: 40, height: 40)
                 .cornerRadius(20)

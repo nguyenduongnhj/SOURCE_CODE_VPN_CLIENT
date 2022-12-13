@@ -29,7 +29,6 @@ class BaseServiceManager<API: TargetType> {
                     } else {
                         throw TokenError.notSignin
                     }
-                    
                 } else {
                     return Single.just($0)
                 }
@@ -113,6 +112,8 @@ extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
         return flatMap { response in
             print("[URL] status \(response.statusCode)")
             print("[URL]: \(response.request?.url?.path)")
+            
+            print("[RESPONSE]: \(String(data: response.data, encoding: .utf8) ?? "")")
             if (200...299) ~= response.statusCode {
                 return Single.just(response)
             }
@@ -134,9 +135,8 @@ extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
     func handleApiResponse<T: BaseModel>(type: T.Type) -> Single<T> {
         return flatMap { response in
             let data = try? JSON(data: response.data)
-             
             let result = BaseResponseModel<T>(json: data)
-            print("[RESPONSE]: \(data ?? "")")
+           
             
             if !(result?.success ?? false) {
                 let genericError = ResponseError(statusCode: response.statusCode,

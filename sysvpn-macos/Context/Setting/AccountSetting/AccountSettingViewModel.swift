@@ -19,18 +19,11 @@ extension AccountSettingView {
             listItem = []
             let emailUser = AppDataManager.shared.userData?.email ?? ""
             let emailAccount = EmailSettingItem(settingName: L10n.Global.emailAccount, settingDesc: L10n.Global.emailAccount, settingValue: emailUser)
-           
-            let subscriptionDetails = SubscriptionSettingItem(
-                settingName: L10n.Global.subscriptionDetails,
-                settingDesc: L10n.Global.subscriptionDetails,
-                isPremium: AppDataManager.shared.userData?.isPremium ?? false,
-                premiumDateExpried: Date(timeIntervalSince1970: TimeInterval(AppDataManager.shared.userData?.premiumExpire ?? 0))
-            )
+            
             
             let accountSercurity = ChangePasswordSettingItem(settingName: L10n.Global.accountSercurity, settingDesc: L10n.Global.systemNotiDesc)
             let newsletters = SwitchSettingItem(settingName: L10n.Global.newsletters, settingDesc: L10n.Global.newslettersDesc, settingValue: false, itemType: .newsletters)
             listItem.append(emailAccount)
-            listItem.append(subscriptionDetails)
             listItem.append(accountSercurity)
             listItem.append(newsletters)
         }

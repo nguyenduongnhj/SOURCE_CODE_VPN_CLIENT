@@ -248,6 +248,20 @@
 			remoteGlobalIDString = AC09D71628BCDCD40078E928;
 			remoteInfo = "sysvpn-macos";
 		};
+		B90E10F62946F658006B0FDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC09D70F28BCDCD40078E928 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA35B8628FD35A400205ECD;
+			remoteInfo = WireGuardKitGo;
+		};
+		B90E10F82946F65C006B0FDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC09D70F28BCDCD40078E928 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA35B8628FD35A400205ECD;
+			remoteInfo = WireGuardKitGo;
+		};
 		FA12F19928FDA98B009753EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC09D70F28BCDCD40078E928 /* Project object */;
@@ -331,7 +345,7 @@
 		9EC3322E28C1151800CA5DF5 /* LoginInputTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputTextFiled.swift; sourceTree = "<group>"; };
 		9EC3323228C2134200CA5DF5 /* LoginButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonStyle.swift; sourceTree = "<group>"; };
 		9EC3323428C254DF00CA5DF5 /* LoginLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoadingView.swift; sourceTree = "<group>"; };
-		AC09D71728BCDCD40078E928 /* SysVPNClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SysVPNClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC09D71728BCDCD40078E928 /* DoragonVPNClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoragonVPNClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC09D71A28BCDCD40078E928 /* sysvpn_macosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sysvpn_macosApp.swift; sourceTree = "<group>"; };
 		AC09D71C28BCDCD40078E928 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC09D71E28BCDCD70078E928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -699,7 +713,7 @@
 		AC09D71828BCDCD40078E928 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC09D71728BCDCD40078E928 /* SysVPNClient.app */,
+				AC09D71728BCDCD40078E928 /* DoragonVPNClient.app */,
 				AC09D72828BCDCD80078E928 /* sysvpn-macosTests.xctest */,
 				AC09D73228BCDCD80078E928 /* sysvpn-macosUITests.xctest */,
 				FAA35B4528FD335600205ECD /* com.sysvpn.client.macos.AppSysExtension.systemextension */,
@@ -1385,7 +1399,7 @@
 				B9D4F6EF2941F81C0039BC77 /* ASN1 */,
 			);
 			productName = "sysvpn-macos";
-			productReference = AC09D71728BCDCD40078E928 /* SysVPNClient.app */;
+			productReference = AC09D71728BCDCD40078E928 /* DoragonVPNClient.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AC09D72728BCDCD80078E928 /* sysvpn-macosTests */ = {
@@ -1452,6 +1466,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B90E10F72946F658006B0FDC /* PBXTargetDependency */,
 			);
 			name = "sysvpn-macosOpenVPNTunnelExtension";
 			packageProductDependencies = (
@@ -1473,6 +1488,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B90E10F92946F65C006B0FDC /* PBXTargetDependency */,
 			);
 			name = OpenVpnAppExtension;
 			packageProductDependencies = (
@@ -1892,6 +1908,16 @@
 			target = AC09D71628BCDCD40078E928 /* sysvpn-macos */;
 			targetProxy = AC09D73328BCDCD80078E928 /* PBXContainerItemProxy */;
 		};
+		B90E10F72946F658006B0FDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA35B8628FD35A400205ECD /* WireGuardKitGo */;
+			targetProxy = B90E10F62946F658006B0FDC /* PBXContainerItemProxy */;
+		};
+		B90E10F92946F65C006B0FDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA35B8628FD35A400205ECD /* WireGuardKitGo */;
+			targetProxy = B90E10F82946F65C006B0FDC /* PBXContainerItemProxy */;
+		};
 		FA12F19A28FDA98B009753EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAA35B4428FD335600205ECD /* sysvpn-macosOpenVPNTunnelExtension */;
@@ -2055,7 +2081,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos;
-				PRODUCT_NAME = SysVPNClient;
+				PRODUCT_NAME = DoragonVPNClient;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "sysvpn-macos/sysvpn_macos_birdge_header.h";
@@ -2089,7 +2115,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos;
-				PRODUCT_NAME = SysVPNClient;
+				PRODUCT_NAME = DoragonVPNClient;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "sysvpn-macos/sysvpn_macos_birdge_header.h";
