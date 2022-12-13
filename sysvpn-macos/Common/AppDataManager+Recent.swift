@@ -23,7 +23,7 @@ struct BoxSaveRecent: Codable {
     var recents: [SavedRecentStruct]
 }
 
-let keyListRecent = "SAVE_LIST_RECENT"
+let keyListRecent = "SAVE_LIST_RECENT_V2"
 extension AppDataManager {
     var listRecents: [SavedRecentStruct] {
         get {

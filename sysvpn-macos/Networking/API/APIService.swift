@@ -27,10 +27,10 @@ extension APIService: TargetType {
     // This is the base URL we'll be using, typically our server.
     var baseURL: URL {
         switch self {
-        case .getAppSettings, .login, .logout, .requestCert, .disconnectSession, .getStartServer, .getListMutilHop, .refreshToken, .changePassword, .loginSocial:
+        case .getAppSettings, .logout, .disconnectSession, .getStartServer, .getListMutilHop, .refreshToken, .changePassword, .loginSocial:
             return URL(string: Constant.API.root)!
             
-        case .getListCountry:
+        case .getListCountry, .requestCert, .login:
             return URL(string: Constant.API.baseUrl)!
         }
     }
@@ -43,13 +43,13 @@ extension APIService: TargetType {
         case .getAppSettings:
             return Constant.API.Path.ipInfo
         case .login:
-            return Constant.API.Path.login
+            return Constant.API.Path.loginV2
         case .getListCountry:
             return Constant.API.Path.listCountry2
         case .logout:
             return Constant.API.Path.logout
         case .requestCert:
-            return Constant.API.Path.requestCert
+            return Constant.API.Path.requestCertV2
         case .disconnectSession:
             return Constant.API.Path.disconnectSession
         case .getStartServer:
@@ -66,9 +66,9 @@ extension APIService: TargetType {
     // Here we specify which method our calls should use.
     var method: Moya.Method {
         switch self {
-        case .getAppSettings, .getListCountry, .requestCert, .getStartServer, .getListMutilHop:
+        case .getAppSettings, .getListCountry, .getStartServer, .getListMutilHop:
             return .get
-        case .login, .logout, .loginSocial, .refreshToken:
+        case .login, .logout, .loginSocial, .refreshToken, .requestCert:
             return .post
         case .disconnectSession:
             return .patch
@@ -98,17 +98,27 @@ extension APIService: TargetType {
         case .getListCountry:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case let .requestCert(vpnParam):
+            if vpnParam.countryId != nil {
+                param["type"] = "country"
+                param["idServer"] = vpnParam.countryId
+            } else if vpnParam.cityId != nil {
+                param["type"] = "city"
+                param["idServer"] = vpnParam.cityId
+            } else if vpnParam.serverId != nil {
+                param["type"] = "server"
+                param["idServer"] = vpnParam.serverId
+            }
             param["proto"] = vpnParam.proto
             param["dev"] = vpnParam.dev
-            param["countryId"] = vpnParam.countryId
+            //param["countryId"] = vpnParam.countryId
             param["prevSessionId"] = vpnParam.prevSessionId
-            param["serverId"] = vpnParam.serverId
-            param["cityId"] = vpnParam.cityId
+            //param["serverId"] = vpnParam.serverId
+            //param["cityId"] = vpnParam.cityId
             param["cybersec"] = vpnParam.cybersec
             param["isHop"] = vpnParam.isHop
             param["tech"] = vpnParam.tech?.vpnTypeStr ?? "ovpn"
             param["deviceInfo"]  = nil 
-            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
         case let .disconnectSession(sectionId, disconnectedBy):
             param["sessionId"] = sectionId
             param["disconnectedBy"] = disconnectedBy

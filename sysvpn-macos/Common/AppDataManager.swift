@@ -19,7 +19,7 @@ extension String {
     static var keyUserIsConnect = "USER_IS_CONNECT"
     static var keyUserInfo = "KEY_USER_INFO"
     static var keySaveUserData = "KEY_USER_DATA"
-    static var keySaveCountry = "KEY_SAVE_COUNTRY"
+    static var keySaveCountry = "KEY_SAVE_COUNTRY_V2"
     static var keySaveUserSetting = "KEY_SAVE_USER_SETTING"
     static var keySaveUserProfile = "KEY_SAVE_USER_PROFILE"
     static var keySaveListUserProfile = "KEY_SAVE_LIST_USER_PROFILE"

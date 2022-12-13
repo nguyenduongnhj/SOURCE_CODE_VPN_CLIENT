@@ -19,7 +19,8 @@ struct Constant {
         
         struct Path {
             static let listCountry2 = "/v1/country/get_list"
-            
+            static let requestCertV2 = "/v1/vpn/request_cert"
+            static let loginV2 = "/v1/auth/login"
             
             static let ipInfo = "/app/module_server/v1/app_setting/get_app_settings"
             static let listCountry = "/app/module_server/v1/country/get_list"
