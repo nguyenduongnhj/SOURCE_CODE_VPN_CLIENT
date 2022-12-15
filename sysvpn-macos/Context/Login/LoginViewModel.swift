@@ -19,6 +19,8 @@ extension LoginView {
         @Published var isRemember: Bool = false
         @Published var isPresentedLoading = false
         @Published var isVerifiedInput = true
+        @Published var isShowCreate = false
+        
         @Environment(\.openURL) private var openURL
         @Published var showAlert = false
         @Published var errorMessage: String = ""
@@ -112,6 +114,7 @@ extension LoginView {
         }
         
         func onTouchCreateAccount() {
+            isShowCreate = true
             print("Creat new button was tapped")
             if let url = URL(string: "https://www.facebook.com/doragon0") {
                 openURL(url)
