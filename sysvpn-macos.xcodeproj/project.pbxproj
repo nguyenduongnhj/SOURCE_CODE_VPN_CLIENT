@@ -149,6 +149,9 @@
 		B9D7F71728D3324C008B1D39 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71628D3324C008B1D39 /* UserModel.swift */; };
 		B9D7F71928D38343008B1D39 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71828D38343008B1D39 /* System.swift */; };
 		B9D7F71C28D781A8008B1D39 /* AppDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71B28D781A8008B1D39 /* AppDataManager.swift */; };
+		B9E08FF8294B052700E18A60 /* TestEcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E08FF7294B052700E18A60 /* TestEcc.swift */; };
+		B9E090F2294B0AD400E18A60 /* openssl-apple in Frameworks */ = {isa = PBXBuildFile; productRef = B9E090F1294B0AD400E18A60 /* openssl-apple */; };
+		B9E090F4294B0C7500E18A60 /* ecc_generate_key.c in Sources */ = {isa = PBXBuildFile; fileRef = B9E090F3294B0C7500E18A60 /* ecc_generate_key.c */; };
 		FA00FA082934B7D900BC1AF7 /* ProtoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA00FA072934B7D900BC1AF7 /* ProtoAdapter.swift */; };
 		FA00FA0F2934C13200BC1AF7 /* WireGuardAdapterEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9C956C290A8695009B2FFE /* WireGuardAdapterEx.swift */; };
 		FA00FA102934C13200BC1AF7 /* ProtoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA00FA072934B7D900BC1AF7 /* ProtoAdapter.swift */; };
@@ -451,6 +454,8 @@
 		B9D7F71828D38343008B1D39 /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		B9D7F71A28D463E8008B1D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9D7F71B28D781A8008B1D39 /* AppDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataManager.swift; sourceTree = "<group>"; };
+		B9E08FF7294B052700E18A60 /* TestEcc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEcc.swift; sourceTree = "<group>"; };
+		B9E090F3294B0C7500E18A60 /* ecc_generate_key.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ecc_generate_key.c; sourceTree = "<group>"; };
 		FA00FA072934B7D900BC1AF7 /* ProtoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtoAdapter.swift; sourceTree = "<group>"; };
 		FA12F19C28FDAE9D009753EE /* SystemNetworkingMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemNetworkingMonitor.swift; sourceTree = "<group>"; };
 		FA12F19E28FDB61A009753EE /* NetworkStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatistics.swift; sourceTree = "<group>"; };
@@ -545,6 +550,7 @@
 				9E3756CC28E6DCA600E95C64 /* SwiftUITooltip in Frameworks */,
 				AC09D75028BCDE7A0078E928 /* RxMoya in Frameworks */,
 				FAA35B8D28FD37C700205ECD /* TunnelKitOpenVPN in Frameworks */,
+				B9E090F2294B0AD400E18A60 /* openssl-apple in Frameworks */,
 				AC09D74A28BCDE7A0078E928 /* CombineMoya in Frameworks */,
 				AC09D74E28BCDE7A0078E928 /* ReactiveMoya in Frameworks */,
 				B99DB42928E449A700331AFB /* PopupView in Frameworks */,
@@ -726,6 +732,7 @@
 		AC09D71928BCDCD40078E928 /* sysvpn-macos */ = {
 			isa = PBXGroup;
 			children = (
+				B9E08FF6294B051500E18A60 /* Middleware */,
 				B9D7F71328D330A5008B1D39 /* Models */,
 				AC09D79C28BE12180078E928 /* Networking */,
 				FAA35B9128FD408000205ECD /* VPNCore */,
@@ -1131,6 +1138,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B9E08FF6294B051500E18A60 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				B9E08FF7294B052700E18A60 /* TestEcc.swift */,
+				B9E090F3294B0C7500E18A60 /* ecc_generate_key.c */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
 		FA12F19B28FDAE9D009753EE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1397,6 +1413,7 @@
 				FAA35B8E28FD37CE00205ECD /* TunnelKitWireGuard */,
 				FADFCE7629006C7600219BB0 /* Kingfisher */,
 				B9D4F6EF2941F81C0039BC77 /* ASN1 */,
+				B9E090F1294B0AD400E18A60 /* openssl-apple */,
 			);
 			productName = "sysvpn-macos";
 			productReference = AC09D71728BCDCD40078E928 /* DoragonVPNClient.app */;
@@ -1552,6 +1569,7 @@
 				9E3756CA28E6DCA600E95C64 /* XCRemoteSwiftPackageReference "SwiftUI-Tooltip" */,
 				FADFCE7529006C7600219BB0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B9D4F6EE2941F81C0039BC77 /* XCRemoteSwiftPackageReference "ASN1" */,
+				B9E090F0294B0AD400E18A60 /* XCRemoteSwiftPackageReference "openssl-apple" */,
 			);
 			productRefGroup = AC09D71828BCDCD40078E928 /* Products */;
 			projectDirPath = "";
@@ -1667,6 +1685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA35BBF28FD41CB00205ECD /* CoreAppConstants.swift in Sources */,
+				B9E08FF8294B052700E18A60 /* TestEcc.swift in Sources */,
 				FAC3CB472901355B0095F30E /* MapTooltipView.swift in Sources */,
 				FAA35BC628FD41CB00205ECD /* SysVPNCore.swift in Sources */,
 				B94AA090293A045400E734B3 /* RenameProfileComponent.swift in Sources */,
@@ -1709,6 +1728,7 @@
 				FAA35BC928FD41CB00205ECD /* XPCServiceUser.swift in Sources */,
 				9E3756C128E6DB6500E95C64 /* VpnMapPointView.swift in Sources */,
 				B9B3704B28FE4FE70022498B /* AuthTokens.swift in Sources */,
+				B9E090F4294B0C7500E18A60 /* ecc_generate_key.c in Sources */,
 				B9A69D2A292DD17800E6A76F /* PopupConfirmSignOutView.swift in Sources */,
 				B94AA08E2939F21200E734B3 /* AppDataManager+Profile.swift in Sources */,
 				FA3A885C292646CE000BDB3D /* AppDataManager+Recent.swift in Sources */,
@@ -2078,8 +2098,17 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework/chilkat-9.5.0-macosx-objc/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0.1;
+				OTHER_LDFLAGS = (
+					"-lresolv",
+					"-lpthread",
+					"-lstdc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos;
 				PRODUCT_NAME = DoragonVPNClient;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2112,8 +2141,17 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework/chilkat-9.5.0-macosx-objc/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0.1;
+				OTHER_LDFLAGS = (
+					"-lresolv",
+					"-lpthread",
+					"-lstdc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sysvpn.client.macos;
 				PRODUCT_NAME = DoragonVPNClient;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2560,6 +2598,14 @@
 				kind = branch;
 			};
 		};
+		B9E090F0294B0AD400E18A60 /* XCRemoteSwiftPackageReference "openssl-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/passepartoutvpn/openssl-apple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		FADFCE7529006C7600219BB0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -2625,6 +2671,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9D4F6EE2941F81C0039BC77 /* XCRemoteSwiftPackageReference "ASN1" */;
 			productName = ASN1;
+		};
+		B9E090F1294B0AD400E18A60 /* openssl-apple */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9E090F0294B0AD400E18A60 /* XCRemoteSwiftPackageReference "openssl-apple" */;
+			productName = "openssl-apple";
 		};
 		FA00FA132934C14C00BC1AF7 /* TunnelKitWireGuardAppExtension */ = {
 			isa = XCSwiftPackageProductDependency;

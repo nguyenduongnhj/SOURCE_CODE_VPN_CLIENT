@@ -121,8 +121,14 @@ extension LoginView {
             }
         }
         
-        func onTouchSocialLoginGoogle() {
-            signInHelper.googleLogin()
+        func onTouchSocialLoginGoogle() { 
+            if let data = generate_key() {
+                let name = String(cString: data)
+                print("KEY: \(name)")
+                free(data)
+            }
+            
+            //signInHelper.googleLogin()
         }
         
         func onLoginSuccess(result: LoginSType) {
