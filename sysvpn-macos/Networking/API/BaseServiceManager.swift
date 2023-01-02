@@ -13,7 +13,11 @@ import SwiftyJSON
 
 class BaseServiceManager<API: TargetType> {
 //    private let provider = MoyaProvider<API>(plugins: [NetworkLoggerPlugin(configuration: .init(logOptions: .formatRequestAscURL))])
-    private let provider = MoyaProvider<API>()
+    private let provider = MoyaProvider<API>(
+        plugins:[
+            MoyaECCPlugin()
+        ]
+    )
     init() {
         provider.session.sessionConfiguration.timeoutIntervalForRequest = 10
         provider.session.sessionConfiguration.timeoutIntervalForResource = 10

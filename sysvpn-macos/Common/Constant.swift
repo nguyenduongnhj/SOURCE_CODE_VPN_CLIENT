@@ -36,4 +36,8 @@ struct Constant {
             static let loginSocial = "/shared/module_auth/v1/login-social"
         }
     }
+    struct SERVER {
+        static let PublicKey =  "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEtHUE1ilipG7XgvbCjSj7knAW85x4\nMJBULkTpMGspQm4rBKDbkAGLAva1Ed12APxxh46CtiV62zU51WcxqdbHmg==\n-----END PUBLIC KEY-----"
+        
+    }
 }

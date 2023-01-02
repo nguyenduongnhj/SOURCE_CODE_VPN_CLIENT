@@ -23,7 +23,18 @@ enum APIService {
     case loginSocial(provider: String, token: String)
 }
 
-extension APIService: TargetType {
+extension APIService: ECTargetType {
+ 
+    
+    var needEncrypt: Bool {
+        switch self {
+        case .login , .getListCountry:
+                return true
+            default:
+                return false
+        }
+    }
+    
     // This is the base URL we'll be using, typically our server.
     var baseURL: URL {
         switch self {
@@ -91,7 +102,7 @@ extension APIService: TargetType {
         case let .login(email, password):
             param["email"] = email
             param["password"] = password
-            return .requestParameters(parameters: param, encoding: URLEncoding.default)
+            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .logout:
             param["refreshToken"] = AppDataManager.shared.refreshToken
             return .requestParameters(parameters: param, encoding: URLEncoding.default)
@@ -148,12 +159,12 @@ extension APIService: TargetType {
     var headers: [String: String]? {
         switch self {
         case .getListCountry, .requestCert, .disconnectSession, .getStartServer, .getListMutilHop, .changePassword:
-            return ["Content-type": "application/x-www-form-urlencoded",
+            return [
                     "Authorization": "Bearer " + (AppDataManager.shared.accessToken?.token ?? ""),
                     "x-device-info": AppSetting.shared.getDeviceInfo()
             ]
         default:
-            return ["Content-type": "application/x-www-form-urlencoded"]
+            return [:]
         }
     }
 }

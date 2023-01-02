@@ -122,13 +122,10 @@ extension LoginView {
         }
         
         func onTouchSocialLoginGoogle() { 
-            if let data = generate_key() {
-                let name = String(cString: data)
-                print("KEY: \(name)")
-                free(data)
-            }
-            
+           
             //signInHelper.googleLogin()
+            
+            ECCOpenSSL.shared.ECDH()
         }
         
         func onLoginSuccess(result: LoginSType) {
