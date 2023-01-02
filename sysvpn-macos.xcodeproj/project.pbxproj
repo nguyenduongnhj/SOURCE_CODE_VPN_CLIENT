@@ -149,7 +149,7 @@
 		B9D7F71728D3324C008B1D39 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71628D3324C008B1D39 /* UserModel.swift */; };
 		B9D7F71928D38343008B1D39 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71828D38343008B1D39 /* System.swift */; };
 		B9D7F71C28D781A8008B1D39 /* AppDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7F71B28D781A8008B1D39 /* AppDataManager.swift */; };
-		B9E08FF8294B052700E18A60 /* TestEcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E08FF7294B052700E18A60 /* TestEcc.swift */; };
+		B9E08FF8294B052700E18A60 /* SwiftEcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E08FF7294B052700E18A60 /* SwiftEcc.swift */; };
 		B9E090F2294B0AD400E18A60 /* openssl-apple in Frameworks */ = {isa = PBXBuildFile; productRef = B9E090F1294B0AD400E18A60 /* openssl-apple */; };
 		B9E090F4294B0C7500E18A60 /* ecc_generate_key.c in Sources */ = {isa = PBXBuildFile; fileRef = B9E090F3294B0C7500E18A60 /* ecc_generate_key.c */; };
 		FA00FA082934B7D900BC1AF7 /* ProtoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA00FA072934B7D900BC1AF7 /* ProtoAdapter.swift */; };
@@ -229,6 +229,7 @@
 		FADF0E602916260E00C88618 /* LoginBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADF0E5F2916260E00C88618 /* LoginBannerView.swift */; };
 		FADFCE7729006C7600219BB0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FADFCE7629006C7600219BB0 /* Kingfisher */; };
 		FADFCE7929006EEE00219BB0 /* BlinkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFCE7829006EEE00219BB0 /* BlinkingView.swift */; };
+		FAEC5627296301AC00EB1154 /* MoyaEccPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC5626296301AC00EB1154 /* MoyaEccPlugin.swift */; };
 		FAEE1BFA28FF1A830044B5CD /* TimerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE1BF928FF1A830044B5CD /* TimerFactory.swift */; };
 		FAFAAE1F290280A6006A69E3 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA35B4728FD335600205ECD /* NetworkExtension.framework */; };
 		FAFAAE27290280A6006A69E3 /* OpenVpnAppExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FAFAAE1E290280A6006A69E3 /* OpenVpnAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -454,7 +455,7 @@
 		B9D7F71828D38343008B1D39 /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		B9D7F71A28D463E8008B1D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9D7F71B28D781A8008B1D39 /* AppDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataManager.swift; sourceTree = "<group>"; };
-		B9E08FF7294B052700E18A60 /* TestEcc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEcc.swift; sourceTree = "<group>"; };
+		B9E08FF7294B052700E18A60 /* SwiftEcc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEcc.swift; sourceTree = "<group>"; };
 		B9E090F3294B0C7500E18A60 /* ecc_generate_key.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ecc_generate_key.c; sourceTree = "<group>"; };
 		FA00FA072934B7D900BC1AF7 /* ProtoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtoAdapter.swift; sourceTree = "<group>"; };
 		FA12F19C28FDAE9D009753EE /* SystemNetworkingMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemNetworkingMonitor.swift; sourceTree = "<group>"; };
@@ -531,6 +532,8 @@
 		FAD511DE292C010E00194004 /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		FADF0E5F2916260E00C88618 /* LoginBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBannerView.swift; sourceTree = "<group>"; };
 		FADFCE7829006EEE00219BB0 /* BlinkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingView.swift; sourceTree = "<group>"; };
+		FAEC56252962C1DC00EB1154 /* ecc_openssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ecc_openssl.h; sourceTree = "<group>"; };
+		FAEC5626296301AC00EB1154 /* MoyaEccPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaEccPlugin.swift; sourceTree = "<group>"; };
 		FAEE1BF928FF1A830044B5CD /* TimerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFactory.swift; sourceTree = "<group>"; };
 		FAFAAE1E290280A6006A69E3 /* OpenVpnAppExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OpenVpnAppExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFAAE21290280A6006A69E3 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
@@ -1141,8 +1144,10 @@
 		B9E08FF6294B051500E18A60 /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
-				B9E08FF7294B052700E18A60 /* TestEcc.swift */,
+				B9E08FF7294B052700E18A60 /* SwiftEcc.swift */,
 				B9E090F3294B0C7500E18A60 /* ecc_generate_key.c */,
+				FAEC56252962C1DC00EB1154 /* ecc_openssl.h */,
+				FAEC5626296301AC00EB1154 /* MoyaEccPlugin.swift */,
 			);
 			path = Middleware;
 			sourceTree = "<group>";
@@ -1685,7 +1690,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA35BBF28FD41CB00205ECD /* CoreAppConstants.swift in Sources */,
-				B9E08FF8294B052700E18A60 /* TestEcc.swift in Sources */,
+				B9E08FF8294B052700E18A60 /* SwiftEcc.swift in Sources */,
+				FAEC5627296301AC00EB1154 /* MoyaEccPlugin.swift in Sources */,
 				FAC3CB472901355B0095F30E /* MapTooltipView.swift in Sources */,
 				FAA35BC628FD41CB00205ECD /* SysVPNCore.swift in Sources */,
 				B94AA090293A045400E734B3 /* RenameProfileComponent.swift in Sources */,
@@ -2586,8 +2592,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/PopupView.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				kind = exactVersion;
+				version = 1.2.1;
 			};
 		};
 		B9D4F6EE2941F81C0039BC77 /* XCRemoteSwiftPackageReference "ASN1" */ = {
