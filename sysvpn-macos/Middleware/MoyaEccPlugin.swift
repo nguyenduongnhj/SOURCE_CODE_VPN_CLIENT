@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-
 import Moya
 
 struct MoyaECCPlugin: PluginType {

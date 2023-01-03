@@ -62,7 +62,7 @@ class ECCOpenSSL {
         free(seckeyLen)
         
         
-        return ECPack(params: strPublicKey, data:  data.aesEncrypt(key: Data(arrayData), iv: ivString) ?? "")
+        return ECPack(params: strPublicKey.replacingOccurrences(of: BEGIN_PKEY, with: "").replacingOccurrences(of: END_PKEY, with: ""), data:  data.aesEncrypt(key: Data(arrayData), iv: ivString) ?? "")
     }
     
     

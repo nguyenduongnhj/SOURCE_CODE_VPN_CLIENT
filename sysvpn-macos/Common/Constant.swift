@@ -9,8 +9,8 @@ import Foundation
 struct Constant {
     struct API {
         #if DEBUG
-//            static let root = "https://prod.sysvpnconnect.com"
-         static let root = "https://api.sysvpnconnect.com"
+            static let root = "https://prod.sysvpnconnect.com"
+//         static let root = "https://api.sysvpnconnect.com"
         #else
             static let root = "https://prod.sysvpnconnect.com"
         #endif

@@ -28,7 +28,7 @@ extension APIService: ECTargetType {
     
     var needEncrypt: Bool {
         switch self {
-        case .login , .getListCountry:
+        case .login, .getListCountry, .requestCert:
                 return true
             default:
                 return false
@@ -94,7 +94,7 @@ extension APIService: ECTargetType {
     var task: Task {
         var param: [String: Any] = [:]
         param["deviceInfo"] = nil 
-        param["deviceInfo"] = AppSetting.shared.getDeviceInfo()
+        //param["deviceInfo"] = AppSetting.shared.getDeviceInfo()
         switch self {
         case .getAppSettings:
             param["platform"] = "macos"
@@ -129,7 +129,7 @@ extension APIService: ECTargetType {
             param["isHop"] = vpnParam.isHop
             param["tech"] = vpnParam.tech?.vpnTypeStr ?? "ovpn"
             param["deviceInfo"]  = nil 
-            return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
+            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case let .disconnectSession(sectionId, disconnectedBy):
             param["sessionId"] = sectionId
             param["disconnectedBy"] = disconnectedBy
